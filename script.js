@@ -4,6 +4,8 @@ const backToTop = document.getElementById('backToTop');
 const contactForm = document.getElementById('contactForm');
 const formStatus = document.getElementById('form-status');
 const loadingScreen = document.querySelector('.loading-screen');
+const projectGrid = document.getElementById('projectGrid');
+const cursorGlow = document.querySelector('.cursor-glow');
 
 const words = ['fast, scalable products.', 'beautiful user experiences.', 'modern MERN solutions.'];
 let wordIndex = 0;
@@ -31,14 +33,13 @@ function typeLoop() {
   setTimeout(typeLoop, deleting ? 55 : 90);
 }
 
-const projectGrid = document.getElementById('projectGrid');
-
 window.addEventListener('load', () => {
   setTimeout(() => {
     loadingScreen.classList.add('hidden');
   }, 700);
   typeLoop();
   loadProjectData();
+  initAnimations();
 });
 
 yearElement.textContent = new Date().getFullYear();
@@ -70,6 +71,7 @@ async function loadProjectData() {
           `
         )
         .join('');
+      document.querySelectorAll('#projectGrid .reveal').forEach((item) => observer.observe(item));
     }
   } catch (error) {
     console.debug('Backend project API not available:', error.message);
@@ -93,8 +95,71 @@ window.addEventListener('scroll', () => {
   backToTop.classList.toggle('visible', window.scrollY > 500);
 });
 
+window.addEventListener('mousemove', (event) => {
+  cursorGlow.style.opacity = '1';
+  cursorGlow.style.left = `${event.clientX}px`;
+  cursorGlow.style.top = `${event.clientY}px`;
+});
+
+window.addEventListener('mouseleave', () => {
+  cursorGlow.style.opacity = '0';
+});
+
+document.querySelectorAll('.magnetic').forEach((button) => {
+  button.addEventListener('mousemove', (event) => {
+    const rect = button.getBoundingClientRect();
+    const offsetX = event.clientX - rect.left;
+    const offsetY = event.clientY - rect.top;
+    button.style.transform = `translate(${(offsetX - rect.width / 2) / 20}px, ${(offsetY - rect.height / 2) / 20}px)`;
+  });
+
+  button.addEventListener('mouseleave', () => {
+    button.style.transform = '';
+  });
+});
+
+const profileCard = document.getElementById('profileCard');
+if (profileCard) {
+  profileCard.addEventListener('mousemove', (event) => {
+    const rect = profileCard.getBoundingClientRect();
+    const rotateY = ((event.clientX - rect.left) / rect.width - 0.5) * 10;
+    const rotateX = ((event.clientY - rect.top) / rect.height - 0.5) * -10;
+    profileCard.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+  });
+
+  profileCard.addEventListener('mouseleave', () => {
+    profileCard.style.transform = '';
+  });
+}
+
 contactForm.addEventListener('submit', (event) => {
   event.preventDefault();
   formStatus.textContent = 'Thanks for reaching out. I will be in touch soon.';
   contactForm.reset();
 });
+
+function initAnimations() {
+  if (window.Swiper) {
+    new Swiper('.swiper', {
+      loop: true,
+      autoplay: {
+        delay: 4500,
+        disableOnInteraction: false
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      }
+    });
+  }
+
+  if (window.framerMotion) {
+    const { animate, stagger } = window.framerMotion;
+    const cards = document.querySelectorAll('.skill-card, .project-card, .service-card, .blog-card');
+    animate(
+      cards,
+      { opacity: [0, 1], y: [12, 0] },
+      { duration: 0.5, delay: stagger(0.06) }
+    );
+  }
+}

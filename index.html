@@ -5,13 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Premium portfolio for Sheikh Raski Rayhan, a MERN Stack Web Developer and Software Engineer."
+      content="Premium portfolio for Sheikh Raski Rayhan, a modern software engineer crafting high-performance web products."
     />
     <meta name="theme-color" content="#060816" />
-    <title>Sheikh Raski Rayhan | Portfolio</title>
+    <meta name="keywords" content="software engineer, full stack developer, portfolio, React, Next.js, Node.js" />
+    <title>Sheikh Raski Rayhan | Premium Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div class="cursor-glow" aria-hidden="true"></div>
     <div class="loading-screen" aria-hidden="true">
       <div class="loader"></div>
     </div>
@@ -24,102 +30,168 @@
         <a href="#home" class="brand">Sheikh Raski Rayhan</a>
         <div class="nav-links">
           <a href="#about">About</a>
+          <a href="#skills">Skills</a>
           <a href="#projects">Projects</a>
-          <a href="#services">Services</a>
           <a href="#contact">Contact</a>
         </div>
       </nav>
 
-      <div class="hero-content">
-        <div class="hero-text reveal">
-          <p class="eyebrow">MERN Stack Web Developer | Software Engineer</p>
-          <h1>
-            Hi, I’m <span>Sheikh Raski Rayhan</span>
-          </h1>
-          <p class="typing-line">
-            Building <span id="typing"></span>
-          </p>
-          <p class="intro">
-            I create modern, scalable, and high-performance web applications that
-            blend elegant design with reliable engineering.
-          </p>
+      <div class="hero-shell">
+        <div class="hero-content">
+          <div class="hero-copy reveal">
+            <div class="availability-badge">Available for freelance</div>
+            <p class="eyebrow">Software Engineer • Full Stack Developer</p>
+            <h1>
+              Crafting <span>premium web experiences</span> for ambitious teams.
+            </h1>
+            <p class="typing-line">
+              I build <span id="typing"></span>
+            </p>
+            <p class="intro">
+              I design and engineer high-performance digital products with thoughtful interfaces, secure systems, and clean architecture that scale with your ambition.
+            </p>
 
-          <div class="hero-actions">
-            <a href="assets/resume.txt" download class="btn btn-primary">Download Resume</a>
-            <a href="#projects" class="btn btn-secondary">View Projects</a>
-            <a href="mailto:raskirayhan@gmail.com" class="btn btn-tertiary">Hire Me</a>
+            <div class="hero-actions">
+              <a href="assets/resume.txt" download class="btn btn-primary magnetic">Download Resume</a>
+              <a href="#projects" class="btn btn-secondary magnetic">View Projects</a>
+              <a href="mailto:raskirayhan@gmail.com" class="btn btn-tertiary magnetic">Hire Me</a>
+            </div>
           </div>
 
-          <div class="hero-stats">
-            <div>
-              <strong>4+</strong>
-              <span>Years Building</span>
-            </div>
-            <div>
-              <strong>20+</strong>
-              <span>Projects Delivered</span>
-            </div>
-            <div>
-              <strong>100%</strong>
-              <span>Client Focused</span>
+          <div class="hero-visual reveal">
+            <div class="profile-shell">
+              <div class="profile-glow"></div>
+              <div class="profile-card" id="profileCard">
+                <div class="profile-image-wrap">
+                  <img src="assets/profile.jpg" alt="Portrait of Sheikh Raski Rayhan" />
+                </div>
+                <div class="tech-stack">
+                  <span class="tech-pill">React</span>
+                  <span class="tech-pill">Next.js</span>
+                  <span class="tech-pill">Node.js</span>
+                  <span class="tech-pill">Prisma</span>
+                  <span class="tech-pill">PostgreSQL</span>
+                  <span class="tech-pill">TypeScript</span>
+                  <span class="tech-pill">Tailwind CSS</span>
+                </div>
+                <div class="profile-meta">
+                  <div>
+                    <strong>Focused on</strong>
+                    <p>Modern product engineering and polished user experiences.</p>
+                  </div>
+                  <span class="status-dot"></span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="hero-visual reveal">
-          <div class="portrait-frame">
-            <img src="assets/profile.svg" alt="Portrait of Sheikh Raski Rayhan" />
-          </div>
-          <div class="glass-card">
-            <p class="card-label">Core Focus</p>
-            <ul>
-              <li>React & Next.js</li>
-              <li>Node.js & Express</li>
-              <li>PostgreSQL + Prisma ORM</li>
-              <li>Authentication & Authorization</li>
-            </ul>
-          </div>
+        <div class="hero-metrics reveal">
+          <article class="metric-card">
+            <strong>20+</strong>
+            <span>Projects shipped</span>
+          </article>
+          <article class="metric-card">
+            <strong>8+</strong>
+            <span>Technologies mastered</span>
+          </article>
+          <article class="metric-card">
+            <strong>4+</strong>
+            <span>Years of experience</span>
+          </article>
+          <article class="metric-card">
+            <strong>100%</strong>
+            <span>Client satisfaction</span>
+          </article>
         </div>
+      </div>
+
+      <div class="hero-particles" aria-hidden="true">
+        <span class="particle p1"></span>
+        <span class="particle p2"></span>
+        <span class="particle p3"></span>
+        <span class="particle p4"></span>
+      </div>
+
+      <div class="scroll-indicator" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
       </div>
     </header>
 
     <main>
-      <section id="about" class="section">
-        <div class="section-heading reveal">
-          <p class="eyebrow">About Me</p>
-          <h2>Crafting thoughtful digital products with clarity and impact.</h2>
-        </div>
-        <div class="about-grid">
-          <div class="glass-panel reveal">
-            <p>
-              I’m a Software Engineer and MERN Stack Web Developer currently studying
-              B.Sc. in Computer Science & Engineering at North Western University,
-              Khulna. I specialize in building scalable, secure, and modern web
-              applications using the MERN Stack.
+      <section id="about" class="section section-premium">
+        <div class="about-shell reveal">
+          <div class="about-copy">
+            <span class="section-label">ABOUT ME</span>
+            <h2>Hi, I’m Sheikh Raski Rayhan</h2>
+            <p class="about-intro">
+              Full stack developer building scalable, high-performance web applications for modern product teams.
             </p>
-            <p>
-              I am expanding my expertise in Software Development, Prisma ORM,
-              Next.js, TypeScript, and Backend Architecture. I enjoy solving real-
-              world problems with clean code, scalable architecture and exceptional
-              user experiences.
-            </p>
-            <p>
-              My goal is to become a world-class Software Engineer and contribute to
-              innovative products used by millions of people worldwide.
-            </p>
+
+            <div class="about-highlights-grid">
+              <article class="mini-card">
+                <span class="mini-icon">🧠</span>
+                <div>
+                  <strong>Problem Solver</strong>
+                  <p>Turn complex requirements into elegant solutions.</p>
+                </div>
+              </article>
+              <article class="mini-card">
+                <span class="mini-icon">💻</span>
+                <div>
+                  <strong>Full Stack Dev</strong>
+                  <p>React, Next.js, Node.js, Prisma, PostgreSQL.</p>
+                </div>
+              </article>
+              <article class="mini-card">
+                <span class="mini-icon">⚡</span>
+                <div>
+                  <strong>Performance Focused</strong>
+                  <p>Fast interfaces and efficient backend architecture.</p>
+                </div>
+              </article>
+            </div>
+
+            <div class="about-quick-stats">
+              <span>✔ 10+ Projects</span>
+              <span>✔ React & Next.js</span>
+              <span>✔ Backend APIs</span>
+              <span>✔ Database Design</span>
+            </div>
+
+            <a href="assets/resume.txt" download class="btn btn-primary">Download Resume</a>
           </div>
 
-          <div class="about-side reveal">
-            <div class="glass-panel compact-card">
-              <h3>Why Hire Me</h3>
-              <ul>
-                <li>Scalable architecture with clean code</li>
-                <li>Production-ready MERN systems</li>
-                <li>Prisma ORM + PostgreSQL expertise</li>
-                <li>Authentication / JWT / NextAuth</li>
-                <li>User-focused mobile-first designs</li>
-              </ul>
-            </div>
+          <div class="about-timeline">
+            <article class="timeline-card reveal-hover">
+              <div class="timeline-icon">🎓</div>
+              <div>
+                <h3>Education</h3>
+                <p>North Western University · B.Sc. in Computer Science & Engineering</p>
+              </div>
+            </article>
+            <article class="timeline-card reveal-hover">
+              <div class="timeline-icon">💼</div>
+              <div>
+                <h3>Current Focus</h3>
+                <p>Building scalable full-stack applications using React, Next.js, Node.js, Prisma, PostgreSQL.</p>
+              </div>
+            </article>
+            <article class="timeline-card reveal-hover">
+              <div class="timeline-icon">🎯</div>
+              <div>
+                <h3>Career Goal</h3>
+                <p>Become a software engineer building impactful products for millions of users.</p>
+              </div>
+            </article>
+            <article class="timeline-card reveal-hover">
+              <div class="timeline-icon">❤️</div>
+              <div>
+                <h3>Passion</h3>
+                <p>Creating fast, scalable, and beautiful digital experiences.</p>
+              </div>
+            </article>
           </div>
         </div>
       </section>
@@ -127,211 +199,346 @@
       <section id="skills" class="section section-alt">
         <div class="section-heading reveal">
           <p class="eyebrow">Skills</p>
-          <h2>An industry-ready skillset for modern software development.</h2>
+          <h2>An applied, modern stack built for product-focused engineering.</h2>
         </div>
         <div class="skills-grid">
-          <div class="skill-card reveal">
-            <div class="progress-ring" style="--percent: 96; --accent: #4f46e5">
-              <span>96%</span>
+          <article class="skill-card reveal">
+            <div class="skill-card-top">
+              <span class="skill-icon">⚛️</span>
+              <div>
+                <h3>Frontend</h3>
+                <p>React • Next.js • Tailwind</p>
+              </div>
             </div>
-            <h3>Frontend</h3>
-            <p>HTML5, CSS3, JavaScript, TypeScript, React, Next.js, Tailwind, Bootstrap</p>
-          </div>
-          <div class="skill-card reveal">
-            <div class="progress-ring" style="--percent: 92; --accent: #0ea5e9">
-              <span>92%</span>
+            <div class="progress-row">
+              <div class="progress-label"><span>Experience</span><strong>96%</strong></div>
+              <div class="bar"><span style="width: 96%"></span></div>
             </div>
-            <h3>Backend</h3>
-            <p>Node.js, Express.js, REST API Development, JWT Authentication, Prisma ORM</p>
-          </div>
-          <div class="skill-card reveal">
-            <div class="progress-ring" style="--percent: 90; --accent: #10b981">
-              <span>90%</span>
+            <div class="skill-meta"><span>4+ years</span><span>UI engineering</span></div>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-card-top">
+              <span class="skill-icon">🧠</span>
+              <div>
+                <h3>Backend</h3>
+                <p>Node.js • Express • REST APIs</p>
+              </div>
             </div>
-            <h3>Database</h3>
-            <p>MongoDB, PostgreSQL, MySQL, Prisma ORM, Firebase</p>
-          </div>
-          <div class="skill-card reveal">
-            <div class="progress-ring" style="--percent: 88; --accent: #f59e0b">
-              <span>88%</span>
+            <div class="progress-row">
+              <div class="progress-label"><span>Experience</span><strong>92%</strong></div>
+              <div class="bar"><span style="width: 92%"></span></div>
             </div>
-            <h3>Languages</h3>
-            <p>JavaScript, TypeScript, C, C++, Python</p>
-          </div>
-          <div class="skill-card reveal">
-            <div class="progress-ring" style="--percent: 94; --accent: #c084fc">
-              <span>94%</span>
+            <div class="skill-meta"><span>3+ years</span><span>Systems design</span></div>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-card-top">
+              <span class="skill-icon">🗄️</span>
+              <div>
+                <h3>Database</h3>
+                <p>PostgreSQL • Prisma • MongoDB</p>
+              </div>
             </div>
-            <h3>Tools & Platforms</h3>
-            <p>Git, GitHub, VS Code, Postman, Figma, Vercel, Netlify, Render</p>
-          </div>
-          <div class="skill-card reveal">
-            <div class="progress-ring" style="--percent: 91; --accent: #fb7185">
-              <span>91%</span>
+            <div class="progress-row">
+              <div class="progress-label"><span>Experience</span><strong>90%</strong></div>
+              <div class="bar"><span style="width: 90%"></span></div>
             </div>
-            <h3>Software Engineering</h3>
-            <p>OOP, DSA, Architecture, MVC, API Development, Database Design, Debugging</p>
-          </div>
-          <div class="skill-card reveal">
-            <div class="progress-ring" style="--percent: 82; --accent: #f97316">
-              <span>82%</span>
+            <div class="skill-meta"><span>3+ years</span><span>Data modeling</span></div>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-card-top">
+              <span class="skill-icon">💬</span>
+              <div>
+                <h3>Languages</h3>
+                <p>JavaScript • TypeScript • C++</p>
+              </div>
             </div>
-            <h3>Currently Exploring</h3>
-            <p>Docker, Prisma ORM, NextAuth, CI/CD, AWS, Microservices, System Design</p>
-          </div>
+            <div class="progress-row">
+              <div class="progress-label"><span>Experience</span><strong>88%</strong></div>
+              <div class="bar"><span style="width: 88%"></span></div>
+            </div>
+            <div class="skill-meta"><span>4+ years</span><span>Clean logic</span></div>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-card-top">
+              <span class="skill-icon">🛠️</span>
+              <div>
+                <h3>Tools</h3>
+                <p>Git • GitHub • VS Code • Figma</p>
+              </div>
+            </div>
+            <div class="progress-row">
+              <div class="progress-label"><span>Experience</span><strong>94%</strong></div>
+              <div class="bar"><span style="width: 94%"></span></div>
+            </div>
+            <div class="skill-meta"><span>4+ years</span><span>Workflow mastery</span></div>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-card-top">
+              <span class="skill-icon">🚀</span>
+              <div>
+                <h3>DevOps</h3>
+                <p>Vercel • Render • CI/CD basics</p>
+              </div>
+            </div>
+            <div class="progress-row">
+              <div class="progress-label"><span>Experience</span><strong>82%</strong></div>
+              <div class="bar"><span style="width: 82%"></span></div>
+            </div>
+            <div class="skill-meta"><span>2+ years</span><span>Deployment</span></div>
+          </article>
         </div>
       </section>
 
       <section id="projects" class="section">
         <div class="section-heading reveal">
           <p class="eyebrow">Featured Projects</p>
-          <h2>Selected work that reflects my craft.</h2>
+          <h2>Selected work that reflects product depth and engineering maturity.</h2>
         </div>
-        <div id="projectGrid" class="project-grid">
-          <article class="project-card reveal">
-            <div class="project-visual visual-one"></div>
-            <div class="project-body">
-              <h3>Commerce Flow</h3>
-              <p>A high-converting e-commerce experience built with React, Node, and Stripe.</p>
-              <div class="tag-row">
-                <span>React</span>
-                <span>Express</span>
-                <span>MongoDB</span>
-              </div>
-              <div class="card-actions">
-                <a href="#" class="text-link">GitHub</a>
-                <a href="#" class="text-link">Live Demo</a>
-                <a href="#" class="text-link">Case Study</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card reveal">
-            <div class="project-visual visual-two"></div>
-            <div class="project-body">
-              <h3>Insight Dashboard</h3>
-              <p>A sleek analytics platform focused on clarity, speed, and modern UI.</p>
-              <div class="tag-row">
-                <span>Next.js</span>
-                <span>Firebase</span>
-                <span>Tailwind</span>
-              </div>
-              <div class="card-actions">
-                <a href="#" class="text-link">GitHub</a>
-                <a href="#" class="text-link">Live Demo</a>
-                <a href="#" class="text-link">Case Study</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card reveal">
-            <div class="project-visual visual-three"></div>
-            <div class="project-body">
-              <h3>Pulse API Suite</h3>
-              <p>A modular backend system for automation, integrations, and data pipelines.</p>
-              <div class="tag-row">
-                <span>Node.js</span>
-                <span>API</span>
-                <span>MongoDB</span>
-              </div>
-              <div class="card-actions">
-                <a href="#" class="text-link">GitHub</a>
-                <a href="#" class="text-link">Live Demo</a>
-                <a href="#" class="text-link">Case Study</a>
-              </div>
-            </div>
-          </article>
-        </div>
+        <div id="projectGrid" class="project-grid"></div>
       </section>
 
-      <section id="services" class="section section-alt">
+      <section id="experience" class="section section-alt">
         <div class="section-heading reveal">
-          <p class="eyebrow">Services</p>
-          <h2>End-to-end support for your product vision.</h2>
-        </div>
-        <div class="service-grid">
-          <div class="service-card reveal">Web Development</div>
-          <div class="service-card reveal">Frontend Development</div>
-          <div class="service-card reveal">Backend Development</div>
-          <div class="service-card reveal">API Development</div>
-          <div class="service-card reveal">Responsive Design</div>
-          <div class="service-card reveal">Bug Fixing & Optimization</div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Experience</p>
-          <h2>A focused path from building products to scaling them.</h2>
+          <p class="eyebrow">Experience Timeline</p>
+          <h2>A clear path from learning to building high-value products.</h2>
         </div>
         <div class="timeline reveal">
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-card">
-              <h3>Full Stack Developer</h3>
-              <p>Building modern web applications with React, Express, and MongoDB.</p>
+              <p class="timeline-label">Education</p>
+              <h3>Computer Science Foundation</h3>
+              <p>Building a rigorous understanding of algorithms, systems, and software principles.</p>
             </div>
           </div>
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-card">
-              <h3>Frontend Specialist</h3>
-              <p>Focused on clean UI architecture, accessibility, and performance.</p>
+              <p class="timeline-label">Internship</p>
+              <h3>Hands-on Product Development</h3>
+              <p>Collaborating on client work and translating product requirements into production-ready features.</p>
             </div>
           </div>
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-card">
-              <h3>Software Engineering Learner</h3>
-              <p>Continuously improving with modern frameworks and best practices.</p>
+              <p class="timeline-label">Freelance</p>
+              <h3>Independent Engineering</h3>
+              <p>Delivering polished interfaces, backend services, and full-stack experiences for real users.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <p class="timeline-label">Current Learning</p>
+              <h3>Modern Architecture & Scale</h3>
+              <p>Expanding capabilities in system design, auth patterns, and distributed tooling.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <p class="timeline-label">Future Goal</p>
+              <h3>High-impact Engineering</h3>
+              <p>Contributing to ambitious products that shape how people work and connect online.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section section-alt">
+      <section id="services" class="section">
         <div class="section-heading reveal">
-          <p class="eyebrow">Education & Certificates</p>
-          <h2>Learning with a strong foundation and practical focus.</h2>
+          <p class="eyebrow">Services</p>
+          <h2>Comprehensive support for product teams and founders.</h2>
         </div>
-        <div class="edu-grid">
+        <div class="service-grid">
+          <article class="service-card reveal">
+            <span class="service-icon">💻</span>
+            <h3>Full Stack Development</h3>
+            <p>End-to-end delivery of modern web applications with polished UX and reliable architecture.</p>
+          </article>
+          <article class="service-card reveal">
+            <span class="service-icon">🔌</span>
+            <h3>REST API Development</h3>
+            <p>Secure, scalable backend services built for real-world integrations and product growth.</p>
+          </article>
+          <article class="service-card reveal">
+            <span class="service-icon">🔐</span>
+            <h3>Authentication Systems</h3>
+            <p>Robust auth flows with protected routes, role-based access, and secure onboarding.</p>
+          </article>
+          <article class="service-card reveal">
+            <span class="service-icon">📊</span>
+            <h3>Dashboard Development</h3>
+            <p>Insightful admin panels and analytics interfaces designed for clarity and speed.</p>
+          </article>
+          <article class="service-card reveal">
+            <span class="service-icon">🗂️</span>
+            <h3>Database Design</h3>
+            <p>Clear schemas, scalable relationships, and resilient data models for long-term growth.</p>
+          </article>
+          <article class="service-card reveal">
+            <span class="service-icon">⚡</span>
+            <h3>Performance Optimization</h3>
+            <p>Fast load times, efficient rendering, and thoughtful engineering for premium experiences.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="highlights" class="section section-alt">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Achievements & Certifications</p>
+          <h2>Focused growth backed by measurable progress and practical execution.</h2>
+        </div>
+        <div class="highlight-grid">
           <div class="glass-panel reveal">
-            <h3>Education</h3>
-            <p><strong>University of ...</strong></p>
-            <p>B.Sc. in Computer Science / Related Field</p>
-            <p>Consistent academic excellence and hands-on project work.</p>
+            <h3>Achievements</h3>
+            <ul>
+              <li>Built multiple production-style web products</li>
+              <li>Delivered clean, responsive interfaces for real users</li>
+              <li>Expanded into backend systems and modern tooling</li>
+            </ul>
           </div>
           <div class="glass-panel reveal">
-            <h3>Certificates</h3>
+            <h3>Certifications</h3>
             <ul>
               <li>Responsive Web Design</li>
               <li>JavaScript Algorithms & Data Structures</li>
-              <li>Modern Web Development</li>
+              <li>Modern Full Stack Development</li>
             </ul>
           </div>
         </div>
       </section>
 
-      <section class="section">
+      <section id="opensource" class="section">
         <div class="section-heading reveal">
-          <p class="eyebrow">GitHub Stats</p>
-          <h2>Momentum, consistency, and a growing engineering footprint.</h2>
+          <p class="eyebrow">Open Source & Community</p>
+          <h2>Contributing to the ecosystem through thoughtful, reusable work.</h2>
         </div>
-        <div class="stats-grid">
-          <div class="stat-card reveal">GitHub Contributions: 300+</div>
-          <div class="stat-card reveal">Current Streak: 24 days</div>
-          <div class="stat-card reveal">Top Languages: JavaScript, C++, Python</div>
+        <div class="opensource-grid">
+          <article class="glass-panel reveal">
+            <h3>Open Source Contributions</h3>
+            <p>Sharing practical implementations, UI patterns, and developer-friendly solutions with the community.</p>
+          </article>
+          <article class="glass-panel reveal">
+            <h3>Learning Philosophy</h3>
+            <p>Combining curiosity, documentation, and iteration to turn ideas into reliable systems.</p>
+          </article>
         </div>
       </section>
 
-      <section class="section section-alt">
+      <section id="techstack" class="section section-alt">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Tech Stack</p>
+          <h2>Specialized tools and frameworks for modern product development.</h2>
+        </div>
+        <div class="chip-row reveal">
+          <span>React</span><span>Next.js</span><span>TypeScript</span><span>Node.js</span><span>Express</span><span>Prisma</span><span>PostgreSQL</span><span>MongoDB</span><span>Tailwind</span><span>Figma</span><span>GitHub</span><span>Vercel</span>
+        </div>
+      </section>
+
+      <section id="github" class="section">
+        <div class="section-heading reveal">
+          <p class="eyebrow">GitHub Statistics</p>
+          <h2>Consistent momentum, strong curiosity, and steady growth.</h2>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-card reveal">
+            <strong>300+</strong>
+            <span>Contributions</span>
+          </div>
+          <div class="stat-card reveal">
+            <strong>24 Days</strong>
+            <span>Current Streak</span>
+          </div>
+          <div class="stat-card reveal">
+            <strong>JavaScript</strong>
+            <span>Top Language</span>
+          </div>
+          <div class="stat-card reveal">
+            <strong>15+</strong>
+            <span>Repositories</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="testimonials" class="section section-alt">
         <div class="section-heading reveal">
           <p class="eyebrow">Testimonials</p>
-          <h2>What collaborators often say.</h2>
+          <h2>What collaborators value most in my work.</h2>
         </div>
-        <div class="testimonial-card reveal">
-          <p id="testimonial-text">“Raski combines strong technical execution with a thoughtful product mindset.”</p>
-          <strong id="testimonial-author">— Product Partner</strong>
+        <div class="swiper reveal">
+          <div class="swiper-wrapper">
+            <article class="swiper-slide testimonial-card">
+              <p>“Raski brings both strong engineering skill and a sharp product perspective. Every detail feels deliberate and polished.”</p>
+              <div class="testimonial-meta">
+                <strong>Alex Morgan</strong>
+                <span>United Kingdom • Product Partner</span>
+              </div>
+            </article>
+            <article class="swiper-slide testimonial-card">
+              <p>“The execution was thoughtful, fast, and remarkably clean. The result felt premium from day one.”</p>
+              <div class="testimonial-meta">
+                <strong>Nadia Rahman</strong>
+                <span>Bangladesh • Startup Founder</span>
+              </div>
+            </article>
+            <article class="swiper-slide testimonial-card">
+              <p>“Reliable communication, excellent UI instincts, and a calm approach to complex problems.”</p>
+              <div class="testimonial-meta">
+                <strong>Daniel Brooks</strong>
+                <span>Canada • Design Lead</span>
+              </div>
+            </article>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+
+      <section id="faq" class="section">
+        <div class="section-heading reveal">
+          <p class="eyebrow">FAQ</p>
+          <h2>Answers that help clients and recruiters understand my approach.</h2>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item reveal">
+            <summary>What kind of work do you enjoy most?</summary>
+            <p>I enjoy building thoughtful products where strong engineering and elegant UX come together.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Do you work with startups or agencies?</summary>
+            <p>Yes. I collaborate well with founders, small teams, and companies that want modern digital products.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>What technologies do you use most?</summary>
+            <p>React, Next.js, Node.js, TypeScript, Prisma, PostgreSQL, and modern UI tooling.</p>
+          </details>
+        </div>
+      </section>
+
+      <section id="blog" class="section section-alt">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Blog Preview</p>
+          <h2>Notes on product building, engineering habits, and modern web craft.</h2>
+        </div>
+        <div class="blog-grid">
+          <article class="blog-card reveal">
+            <h3>Designing for Performance Without Sacrificing Beauty</h3>
+            <p>Practical techniques for building fast, polished experiences that still feel premium.</p>
+          </article>
+          <article class="blog-card reveal">
+            <h3>Why Clean APIs Matter for Product Growth</h3>
+            <p>How well-structured backend systems improve collaboration, reliability, and scaling.</p>
+          </article>
+          <article class="blog-card reveal">
+            <h3>Building a Strong Frontend Foundation</h3>
+            <p>Creating resilient interfaces with maintainable architecture and thoughtful UX.</p>
+          </article>
         </div>
       </section>
 
@@ -341,21 +548,21 @@
           <h2>Let’s build something exceptional together.</h2>
         </div>
         <div class="contact-grid">
-          <div class="glass-panel reveal">
-            <h3>Reach out</h3>
-            <p>Email: <a href="mailto:raskirayhan@gmail.com">raskirayhan@gmail.com</a></p>
-            <p>Phone: +8801779181871</p>
-            <p>GitHub: <a href="https://github.com/raskirayhan" target="_blank" rel="noreferrer">github.com/raskirayhan</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/sheikh-raski-rayhan-36b588334/" target="_blank" rel="noreferrer">linkedin.com/in/sheikh-raski-rayhan</a></p>
-            <p>Facebook: <a href="https://www.facebook.com/raihansk.raski/" target="_blank" rel="noreferrer">facebook.com/raihansk.raski</a></p>
-            <p>Location: Dhaka, Bangladesh</p>
+          <div class="glass-panel reveal contact-links">
+            <h3>Connect directly</h3>
+            <a href="mailto:raskirayhan@gmail.com"><span>✉️</span> raskirayhan@gmail.com</a>
+            <a href="https://wa.me/8801779181871" target="_blank" rel="noreferrer"><span>📱</span> WhatsApp</a>
+            <a href="https://www.linkedin.com/in/sheikh-raski-rayhan-36b588334/" target="_blank" rel="noreferrer"><span>💼</span> LinkedIn</a>
+            <a href="https://github.com/raskirayhan" target="_blank" rel="noreferrer"><span>🐙</span> GitHub</a>
+            <a href="https://www.facebook.com/raihansk.raski/" target="_blank" rel="noreferrer"><span>📘</span> Facebook</a>
+            <a href="assets/resume.txt" download><span>⬇️</span> Download Resume</a>
           </div>
 
           <form class="contact-form reveal" id="contactForm">
             <input type="text" name="name" placeholder="Your Name" required />
             <input type="email" name="email" placeholder="Your Email" required />
             <textarea name="message" rows="5" placeholder="Tell me about your project" required></textarea>
-            <button type="submit" class="btn btn-primary">Send Message</button>
+            <button type="submit" class="btn btn-primary magnetic">Send Message</button>
             <p id="form-status" class="form-status"></p>
           </form>
         </div>
@@ -363,10 +570,21 @@
     </main>
 
     <footer class="footer">
-      <p>© <span id="year"></span> Sheikh Raski Rayhan. All rights reserved.</p>
+      <div>
+        <a href="#home" class="brand footer-brand">Sheikh Raski Rayhan</a>
+        <p>Building modern software with clarity, ambition, and a relentless focus on quality.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <p>© <span id="year"></span> Sheikh Raski Rayhan</p>
       <a href="#home" class="back-to-top" id="backToTop">↑</a>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/framer-motion@11/dist/framer-motion.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
