@@ -1,0 +1,19 @@
+# Local environment
+.env
+.env.*
+!.env.example
+
+# Dependencies and generated output
+node_modules/
+backend/node_modules/
+dist/
+coverage/
+
+# Logs and OS files
+*.log
+.DS_Store
+Thumbs.db
+
+# Local editor settings
+.idea/
+.vscode/

@@ -1,0 +1,14 @@
+<svg width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Sheikh Raski Rayhan mark</title>
+  <desc id="desc">A dark rounded square with an indigo and cyan SR monogram.</desc>
+  <defs>
+    <linearGradient id="gradient" x1="18" y1="16" x2="142" y2="144" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6366F1" />
+      <stop offset="1" stop-color="#22D3EE" />
+    </linearGradient>
+  </defs>
+  <rect width="160" height="160" rx="42" fill="#0B1220" />
+  <rect x="12" y="12" width="136" height="136" rx="34" stroke="url(#gradient)" stroke-width="4" />
+  <path d="M101 52.5C93.5 46.3 84.8 43.2 75 43.2C60.2 43.2 51.5 49.8 51.5 59.7C51.5 70 59.1 74.1 75.8 78.1C91.9 81.9 99.2 85.7 99.2 95.5C99.2 106.4 89.9 113.3 75.1 113.3C64.9 113.3 55.1 109.7 47.7 103.1" stroke="url(#gradient)" stroke-width="10" stroke-linecap="round" />
+  <path d="M47 48V111M47 79H73C83.5 79 90.5 73 90.5 63.8C90.5 54.7 83.5 48 73 48H47Z" stroke="#F8FAFC" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" />
+</svg>

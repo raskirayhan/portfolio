@@ -1,0 +1,22 @@
+name: Project idea
+description: Suggest a focused improvement to the portfolio or developer experience
+title: "idea: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this space for thoughtful ideas about the portfolio, documentation, or developer experience.
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: What opportunity or problem does this idea address?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: What would a useful first version look like?
+    validations:
+      required: true

@@ -10,33 +10,36 @@ app.use(express.json());
 const projects = [
   {
     id: 1,
-    title: 'Commerce Flow',
-    description: 'A high-converting e-commerce experience built with React, Node, and Stripe.',
-    tech: ['React', 'Express', 'MongoDB'],
-    github: 'https://github.com/raskirayhan/commerce-flow',
-    demo: 'https://raskirayhan.github.io/commerce-flow',
+    title: 'Flower Website',
+    description: 'A beautiful e-commerce platform for fresh flowers with elegant product showcase and seamless checkout experience.',
+    tech: ['React', 'CSS', 'JavaScript'],
+    github: 'https://github.com/raskirayhan/flower-website.git',
+    demo: 'https://raskirayhan.github.io/flower-website/',
+    screenshot: '/image/flower_workshop/screencapture-raskirayhan-github-io-flower-website-2026-07-06-01_53_14.png',
     caseStudy: '#',
-    color: 'linear-gradient(135deg, #4f46e5, #38bdf8)'
+    color: 'linear-gradient(135deg, #f97316, #ea580c)'
   },
   {
     id: 2,
-    title: 'Insight Dashboard',
-    description: 'A sleek analytics platform focused on clarity, speed, and modern UI.',
-    tech: ['Next.js', 'Firebase', 'Tailwind'],
-    github: 'https://github.com/raskirayhan/insight-dashboard',
-    demo: 'https://raskirayhan.github.io/insight-dashboard',
+    title: 'Habit Tracker',
+    description: 'A powerful habit tracking application to visualize progress, stay motivated, and build consistent routines.',
+    tech: ['React', 'TypeScript', 'Tailwind'],
+    github: 'https://github.com/raskirayhan/habit-tracker.git',
+    demo: 'https://habit-tracker-najifjawoad.netlify.app/',
+    screenshot: '/image/habbit_trucker/screencapture-habit-tracker-najifjawoad-netlify-app-2026-07-06-01_55_17.png',
     caseStudy: '#',
-    color: 'linear-gradient(135deg, #14b8a6, #3b82f6)'
+    color: 'linear-gradient(135deg, #6366f1, #8b5cf6)'
   },
   {
     id: 3,
-    title: 'Pulse API Suite',
-    description: 'A modular backend system for automation, integrations, and data pipelines.',
-    tech: ['Node.js', 'API', 'MongoDB'],
-    github: 'https://github.com/raskirayhan/pulse-api-suite',
-    demo: 'https://raskirayhan.github.io/pulse-api-suite',
+    title: 'G3 Architects',
+    description: 'A professional architecture firm website showcasing portfolio, team, and services with modern design.',
+    tech: ['HTML', 'CSS', 'JavaScript'],
+    github: 'https://github.com/raskirayhan/g3-architect-website-repo',
+    demo: 'https://raskirayhan.github.io/g3-architect-website-repo/',
+    screenshot: '/image/g3 architecture/screencapture-raskirayhan-github-io-g3-architect-website-repo-2026-07-06-01_56_44.png',
     caseStudy: '#',
-    color: 'linear-gradient(135deg, #f59e0b, #ec4899)'
+    color: 'linear-gradient(135deg, #f59e0b, #fbbf24)'
   }
 ];
 
@@ -48,6 +51,10 @@ app.get('/api/status', (req, res) => {
   res.json({ status: 'ok', message: 'Portfolio backend is live.' });
 });
 
-app.listen(port, () => {
-  console.log(`Portfolio backend running at http://localhost:${port}`);
-});
+if (require.main === module) {
+  app.listen(port, () => {
+    console.log(`Portfolio backend running at http://localhost:${port}`);
+  });
+}
+
+module.exports = { app, projects };
