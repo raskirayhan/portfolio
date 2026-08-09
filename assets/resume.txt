@@ -1,105 +1,90 @@
 ================================================================================
                            SHEIKH RASKI RAYHAN
-             MERN Stack Web Developer | Software Engineer | CSE
+       MERN Stack Web Developer | B.Sc. in CSE Student (Ongoing)
 ================================================================================
 
 CONTACT INFORMATION
 --------------------------------------------------------------------------------
+Phone       : +880 1995-785133
 Email       : raskirayhan@gmail.com
-Phone       : 01995785133
-WhatsApp    : +8801779181871
 Location    : Bagerhat, Khulna, Bangladesh
 GitHub      : https://github.com/raskirayhan
 LinkedIn    : https://www.linkedin.com/in/sheikh-raski-rayhan-36b588334?originalSubdomain=bd
-Facebook    : https://www.facebook.com/skraskirayhan/
 Portfolio   : https://raskirayhan.github.io/portfolio/
 
 
-PROFESSIONAL SUMMARY & JOURNEY
+PROFESSIONAL SUMMARY
 --------------------------------------------------------------------------------
-Passionate Software Engineering student pursuing B.Sc. in Computer Science & 
-Engineering at North Western University, Khulna. Specializing in modern full-stack 
-web development using the MERN stack (MongoDB, Express.js, React, Node.js). 
-
-My journey began with fundamental problem solving in C/C++ during core CSE 
-coursework. Driven by a desire to craft interactive user experiences, I expanded 
-into JavaScript & TypeScript engineering, building scalable RESTful APIs, responsive 
-frontends, and full-stack service marketplace platforms.
+Dedicated MERN Stack Developer and Computer Science undergraduate focused on 
+engineering high-performance, mobile-responsive web platforms. Proficient in 
+architecting modern frontend interfaces using React.js and Next.js, integrated with 
+scalable MongoDB and Node.js backend solutions. Committed to delivering clean, 
+maintainable code and optimized UI/UX while addressing intricate engineering 
+requirements.
 
 
-TECHNICAL SKILLS
+TECHNICAL & INDUSTRIAL SKILLS
 --------------------------------------------------------------------------------
-Frontend Development : React.js, Next.js, JavaScript (ES6+), HTML5, CSS3, 
-                       Tailwind CSS, Bootstrap, Responsive Web Design
-Backend Engineering  : Node.js, Express.js, RESTful APIs, JWT Authentication
-Databases & Storage  : MongoDB, PostgreSQL, Prisma ORM, Mongoose
-Languages            : JavaScript, TypeScript, C++, C
-Tools & Workflow     : Git, GitHub, VS Code, Postman, Figma
-Deployment & Cloud   : Vercel, Netlify, Firebase, Render
-
-
-EDUCATIONAL QUALIFICATION
---------------------------------------------------------------------------------
-Degree       : Bachelor of Science (B.Sc.) in Computer Science & Engineering (CSE)
-Institution  : North Western University, Khulna, Bangladesh
-Status       : Undergraduate Student
-Key Courses  : Data Structures & Algorithms, Database Management Systems (DBMS), 
-               Software Engineering & System Analysis, Web Engineering, 
-               Object-Oriented Programming (OOP in C++/Java/JS)
-
-
-EXPERIENCE & PRACTICAL WORK
---------------------------------------------------------------------------------
-Full Stack Web Projects & Freelance Engineering
-- Designed and engineered end-to-end MERN stack web applications with custom 
-  responsive UI/UX, secure authentication, and database modeling.
-- Built production-ready frontend client applications and RESTful backend APIs 
-  deployed on Vercel, Netlify, and Render.
-- Collaborated on open-source repositories and client project implementations.
+Frontend     : React.js, Next.js, JavaScript (ES6+), TypeScript, Tailwind CSS, 
+               HTML5/CSS3, Redux Toolkit
+Backend & DB : Node.js, Express.js, MongoDB, RESTful APIs, Firebase Auth, 
+               JWT Authentication
+Tools & CS   : Git, GitHub, Vercel, Netlify, Postman, Data Structures & Algorithms, 
+               Object-Oriented Programming (OOP)
+Soft Skills  : Problem Solving, Technical Communication, System Analysis, 
+               Agile Collaboration
 
 
 FEATURED PROJECTS
 --------------------------------------------------------------------------------
-1. FixItNow - Full-Stack Service Marketplace
-   Description  : A comprehensive full-stack service booking and repair platform 
-                  connecting users with verified technicians. Features role-based 
-                  dashboards, appointment scheduling, real-time booking tracking, 
-                  and customer review workflows.
-   Tech Stack   : TypeScript, Next.js, React, Node.js, Express, MongoDB, Prisma
-   Live Demo    : https://raskirayhan.github.io/FixItNow-/
-   GitHub Repo  : https://github.com/raskirayhan/FixItNow-
-   Challenges   : Architecting complex multi-role authorization (Customer, 
-                  Provider, Admin) and conflicting appointment scheduling logic.
-   Future Plans : Integrate online payment gateway (Stripe/SSLCommerz), WebSockets 
-                  live messaging, and technician GPS tracking.
+1. FixItNow – On-Demand Service & Repair Platform
+   Overview   : A full-stack MERN application enabling seamless discovery, booking, 
+                and management of local home repair and technical services.
+   Live Demo  : https://raskirayhan.github.io/FixItNow-/
+   Client Repo: https://github.com/raskirayhan/FixItNow-
+   Major Features:
+   - Role-based JWT & Firebase authentication securing user and service provider 
+     dashboards.
+   - Real-time service search, multi-category filtering, and interactive booking 
+     workflows.
+   - Express.js REST API and MongoDB backend with complete CRUD data management.
+   - Fast, mobile-responsive UI built with React.js, React Hooks, and Tailwind CSS.
 
-2. Habit Tracker Application
-   Description  : A habit-building application featuring user authentication, 
-                  streak tracking, completion statistics, and responsive dashboard.
-   Tech Stack   : React, Firebase Auth, MongoDB, Node.js, Tailwind CSS
-   Live Demo    : https://habit-tracker-najifjawoad.netlify.app/
-   GitHub Repo  : https://github.com/raskirayhan/habit-tracker
-   Challenges   : Timezone-aware habit completion calculations and Firebase auth 
-                  state persistence.
-   Future Plans : Add daily push notifications and friend challenge leaderboards.
+2. G3 Architects – Architectural Portfolio & Services Platform
+   Overview   : A modern, responsive web application designed for architectural 
+                firms to showcase featured projects, client testimonials, and 
+                service offerings.
+   Live Demo  : https://raskirayhan.github.io/g3-architect-website-repo/
+   Code Repo  : https://github.com/raskirayhan/g3-architect-website-repo
+   Major Features:
+   - Interactive projects showcase galleries built with CSS Grid, Flexbox, and 
+     modal overlays.
+   - Mobile-first responsive architecture ensures seamless layout adaptation across 
+     viewports.
+   - Smooth scroll navigation, visual hero sections, and dynamic UI micro-interactions.
+   - Optimized asset delivery maintaining fast page load speeds and cross-browser 
+     accuracy.
 
-3. Flower Storefront & Workshop
-   Description  : A responsive flower storefront with seasonal product displays, 
-                  interactive product cards, shopping cart workflow, and smooth 
-                  CSS micro-animations.
-   Tech Stack   : HTML5, CSS3, JavaScript (ES6+), Responsive CSS Grid
-   Live Demo    : https://raskirayhan.github.io/flower-website/
-   GitHub Repo  : https://github.com/raskirayhan/flower-website
-   Challenges   : Maintaining aspect ratio consistency and fast page rendering 
-                  across mobile, tablet, and desktop viewports.
-   Future Plans : Integrate Node.js/MongoDB e-commerce API with user checkout.
 
-4. G3 Architects Studio Portfolio
-   Description  : A modern architecture studio landing page focused on bold 
-                  typography, service showcases, team highlights, and contact form.
-   Tech Stack   : HTML5, Vanilla CSS, JavaScript, CSS Grid & Flexbox
-   Live Demo    : https://raskirayhan.github.io/g3-architect-website-repo/
-   GitHub Repo  : https://github.com/raskirayhan/g3-architect-website-repo
-   Challenges   : Cross-browser responsive alignment without heavy CSS libraries.
-   Future Plans : Implement 3D interactive architectural model viewer (Three.js).
+EDUCATION
+--------------------------------------------------------------------------------
+Degree      : Bachelor of Science (B.Sc.) in Computer Science & Engineering (CSE)
+Institution : North Western University, Khulna, Bangladesh
+Status      : Undergraduate Student (Ongoing)
+Key Courses : Data Structures & Algorithms, Database Management Systems (DBMS), 
+              Software Engineering & System Analysis, Web Engineering, 
+              Object-Oriented Programming (OOP).
+
+
+EXTRA-CURRICULAR ACTIVITIES & LEADERSHIP
+--------------------------------------------------------------------------------
+Public Speaking & Debating: Active Speaker at University Debating Club – Sharpened 
+structured argumentation, logical reasoning, and articulate communication 
+through competitive debate tournaments.
+
+
+LANGUAGES
+--------------------------------------------------------------------------------
+English     : Professional Working Proficiency
+Bengali     : Native / Full Professional Proficiency
 ================================================================================
