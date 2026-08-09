@@ -1,15 +1,103 @@
-Sheikh Raski Rayhan
-MERN Stack Web Developer | Software Engineer
+================================================================================
+                           SHEIKH RASKI RAYHAN
+             MERN Stack Web Developer | Software Engineer | CSE
+================================================================================
 
-Skills:
-React, Next.js, Node.js, Express, MongoDB, Firebase, TypeScript, Tailwind CSS, Bootstrap, Git, GitHub, VS Code, Postman
+CONTACT INFORMATION
+--------------------------------------------------------------------------------
+Email       : raskirayhan@gmail.com
+Phone       : 01995785133
+WhatsApp    : +8801779181871
+Location    : Bagerhat, Khulna, Bangladesh
+GitHub      : https://github.com/raskirayhan
+LinkedIn    : https://www.linkedin.com/in/sheikh-raski-rayhan-36b588334?originalSubdomain=bd
+Facebook    : https://www.facebook.com/skraskirayhan/
+Portfolio   : https://raskirayhan.github.io/portfolio/
 
-Experience:
-- Building scalable web applications and user-focused interfaces
-- Developing full-stack systems with modern JavaScript tools
-- Delivering polished products with strong performance and accessibility
 
-Contact:
-Email: contact@raskirayhan.dev
-GitHub: github.com/raskirayhan
-LinkedIn: linkedin.com/in/sheikh-raski-rayhan-36b588334
+PROFESSIONAL SUMMARY & JOURNEY
+--------------------------------------------------------------------------------
+Passionate Software Engineering student pursuing B.Sc. in Computer Science & 
+Engineering at North Western University, Khulna. Specializing in modern full-stack 
+web development using the MERN stack (MongoDB, Express.js, React, Node.js). 
+
+My journey began with fundamental problem solving in C/C++ during core CSE 
+coursework. Driven by a desire to craft interactive user experiences, I expanded 
+into JavaScript engineering, building scalable RESTful APIs, responsive frontends, 
+and database-driven web applications with clean, maintainable architecture.
+
+
+TECHNICAL SKILLS
+--------------------------------------------------------------------------------
+Frontend Development : React.js, Next.js, JavaScript (ES6+), HTML5, CSS3, 
+                       Tailwind CSS, Bootstrap, Responsive Web Design
+Backend Engineering  : Node.js, Express.js, RESTful APIs, JWT Authentication
+Databases & Storage  : MongoDB, PostgreSQL, Prisma ORM, Mongoose
+Languages            : JavaScript, TypeScript, C++, C
+Tools & Workflow     : Git, GitHub, VS Code, Postman, Figma
+Deployment & Cloud   : Vercel, Netlify, Firebase, Render
+
+
+EDUCATIONAL QUALIFICATION
+--------------------------------------------------------------------------------
+Degree       : Bachelor of Science (B.Sc.) in Computer Science & Engineering (CSE)
+Institution  : North Western University, Khulna, Bangladesh
+Status       : Undergraduate Student
+Key Courses  : Data Structures & Algorithms, Database Management Systems (DBMS), 
+               Software Engineering & System Analysis, Web Engineering, 
+               Object-Oriented Programming (OOP in C++/Java/JS)
+
+
+EXPERIENCE & PRACTICAL WORK
+--------------------------------------------------------------------------------
+Full Stack Web Projects & Freelance Engineering
+- Designed and engineered end-to-end MERN stack web applications with custom 
+  responsive UI/UX, secure authentication, and database modeling.
+- Built production-ready frontend client applications and RESTful backend APIs 
+  deployed on Vercel, Netlify, and Render.
+- Collaborated on open-source repositories and client project implementations.
+
+
+FEATURED PROJECTS
+--------------------------------------------------------------------------------
+1. Flower Storefront & Workshop
+   Description  : A responsive flower storefront with seasonal product displays, 
+                  interactive product cards, shopping cart workflow, and smooth 
+                  CSS micro-animations.
+   Tech Stack   : HTML5, CSS3, JavaScript (ES6+), Responsive CSS Grid
+   Live Demo    : https://raskirayhan.github.io/flower-website/
+   GitHub Repo  : https://github.com/raskirayhan/flower-website
+   Challenges   : Maintaining aspect ratio consistency and fast page rendering 
+                  across mobile, tablet, and desktop viewports.
+   Future Plans : Integrate Node.js/MongoDB e-commerce API with user checkout.
+
+2. Habit Tracker Application
+   Description  : A habit-building application featuring user authentication, 
+                  streak tracking, completion statistics, and responsive dashboard.
+   Tech Stack   : React, Firebase Auth, MongoDB, Node.js, Tailwind CSS
+   Live Demo    : https://habit-tracker-najifjawoad.netlify.app/
+   GitHub Repo  : https://github.com/raskirayhan/habit-tracker
+   Challenges   : Timezone-aware habit completion calculations and Firebase auth 
+                  state persistence.
+   Future Plans : Add daily push notifications and friend challenge leaderboards.
+
+3. G3 Architects Studio Portfolio
+   Description  : A modern architecture studio landing page focused on bold 
+                  typography, service showcases, team highlights, and contact form.
+   Tech Stack   : HTML5, Vanilla CSS, JavaScript, CSS Grid & Flexbox
+   Live Demo    : https://raskirayhan.github.io/g3-architect-website-repo/
+   GitHub Repo  : https://github.com/raskirayhan/g3-architect-website-repo
+   Challenges   : Cross-browser responsive alignment without heavy CSS libraries.
+   Future Plans : Implement 3D interactive architectural model viewer (Three.js).
+
+
+PERSONAL INTERESTS & HOBBIES
+--------------------------------------------------------------------------------
+- Sports & Cricket: Enthusiastic player and follower of cricket.
+- Painting & Design: Exploring visual design, color palettes, and UI sketches.
+- Traveling: Exploring natural scenery and historic landmarks across Bangladesh.
+- Technology & Music: Listening to music while diving into open-source software.
+
+================================================================================
+                   References available upon request.
+================================================================================
