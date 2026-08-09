@@ -89,15 +89,4 @@ FEATURED PROJECTS
    GitHub Repo  : https://github.com/raskirayhan/g3-architect-website-repo
    Challenges   : Cross-browser responsive alignment without heavy CSS libraries.
    Future Plans : Implement 3D interactive architectural model viewer (Three.js).
-
-
-PERSONAL INTERESTS & HOBBIES
---------------------------------------------------------------------------------
-- Sports & Cricket: Enthusiastic player and follower of cricket.
-- Painting & Design: Exploring visual design, color palettes, and UI sketches.
-- Traveling: Exploring natural scenery and historic landmarks across Bangladesh.
-- Technology & Music: Listening to music while diving into open-source software.
-
-================================================================================
-                   References available upon request.
 ================================================================================
