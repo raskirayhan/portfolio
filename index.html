@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Premium portfolio for Sheikh Raski Rayhan, a modern software engineer crafting high-performance web products."
+      content="Official Portfolio of Sheikh Raski Rayhan - MERN Stack Developer & Software Engineer crafting high-performance web applications."
     />
     <meta name="theme-color" content="#060816" />
-    <meta name="keywords" content="software engineer, full stack developer, portfolio, React, Next.js, Node.js" />
-    <title>Sheikh Raski Rayhan | Premium Portfolio</title>
+    <meta name="keywords" content="Sheikh Raski Rayhan, MERN Stack, Full Stack Developer, Software Engineer, React, Node.js, Khulna, Portfolio" />
+    <title>Sheikh Raski Rayhan | Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -17,44 +17,93 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!-- Cursor Glow Element -->
     <div class="cursor-glow" aria-hidden="true"></div>
+
+    <!-- Page Loader -->
     <div class="loading-screen" aria-hidden="true">
       <div class="loader"></div>
     </div>
 
+    <!-- Background Accent Glows -->
     <div class="background-glow glow-one"></div>
     <div class="background-glow glow-two"></div>
 
+    <!-- Header & Navigation -->
     <header class="hero" id="home">
       <nav class="nav">
         <a href="#home" class="brand">Sheikh Raski Rayhan</a>
-        <div class="nav-links">
+        <div class="nav-links desktop-only">
           <a href="#about">About</a>
           <a href="#skills">Skills</a>
+          <a href="#education">Education</a>
+          <a href="#experience">Experience</a>
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
         </div>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Navigation Menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
       </nav>
+
+      <!-- Mobile Navigation Drawer -->
+      <div class="mobile-drawer" id="mobileDrawer">
+        <a href="#about" class="mobile-nav-link">About</a>
+        <a href="#skills" class="mobile-nav-link">Skills</a>
+        <a href="#education" class="mobile-nav-link">Education</a>
+        <a href="#experience" class="mobile-nav-link">Experience</a>
+        <a href="#projects" class="mobile-nav-link">Projects</a>
+        <a href="#contact" class="mobile-nav-link">Contact</a>
+        <a href="assets/resume.txt" download class="btn btn-primary btn-sm" style="margin-top: 1rem;">Download Resume</a>
+      </div>
 
       <div class="hero-shell">
         <div class="hero-content">
           <div class="hero-copy reveal">
-            <div class="availability-badge">Available for freelance</div>
-            <p class="eyebrow">Software Engineer • Full Stack Developer</p>
+            <div class="availability-badge">Available for Work & Collaboration</div>
+            <p class="eyebrow">MERN Stack Developer • Software Engineer</p>
             <h1>
-              Crafting <span>premium web experiences</span> for ambitious teams.
+              Crafting <span>scalable web experiences</span> with modern precision.
             </h1>
             <p class="typing-line">
               I build <span id="typing"></span>
             </p>
             <p class="intro">
-              I design and engineer high-performance digital products with thoughtful interfaces, secure systems, and clean architecture that scale with your ambition.
+              Computer Science student and full-stack web developer passionate about building high-performance applications, elegant interfaces, and robust backend APIs.
             </p>
 
             <div class="hero-actions">
-              <a href="assets/resume.txt" download class="btn btn-primary magnetic">Download Resume</a>
+              <a href="assets/resume.txt" download class="btn btn-primary magnetic" id="resumeBtn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                Download Resume
+              </a>
               <a href="#projects" class="btn btn-secondary magnetic">View Projects</a>
-              <a href="mailto:raskirayhan@gmail.com" class="btn btn-tertiary magnetic">Hire Me</a>
+              <a href="#contact" class="btn btn-tertiary magnetic">Hire Me</a>
+            </div>
+
+            <!-- Social Links Embed -->
+            <div class="social-links-bar">
+              <span class="social-label">Connect with me:</span>
+              <div class="social-icons">
+                <a href="https://github.com/raskirayhan" target="_blank" rel="noreferrer" class="social-btn" title="GitHub">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                  <span>GitHub</span>
+                </a>
+                <a href="https://www.linkedin.com/in/sheikh-raski-rayhan-36b588334?originalSubdomain=bd" target="_blank" rel="noreferrer" class="social-btn" title="LinkedIn">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                  <span>LinkedIn</span>
+                </a>
+                <a href="https://www.facebook.com/skraskirayhan/" target="_blank" rel="noreferrer" class="social-btn" title="Facebook">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                  <span>Facebook</span>
+                </a>
+                <a href="https://wa.me/8801779181871" target="_blank" rel="noreferrer" class="social-btn" title="WhatsApp">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                  <span>WhatsApp</span>
+                </a>
+              </div>
             </div>
           </div>
 
@@ -65,21 +114,25 @@
                 <div class="profile-image-wrap">
                   <img src="image/1780171147227.png" alt="Portrait of Sheikh Raski Rayhan" />
                 </div>
+                <div class="profile-details">
+                  <span class="profile-name">Sheikh Raski Rayhan</span>
+                  <span class="profile-title">B.Sc. in CSE • MERN Developer</span>
+                </div>
                 <div class="tech-stack">
                   <span class="tech-pill">React</span>
                   <span class="tech-pill">Next.js</span>
                   <span class="tech-pill">Node.js</span>
-                  <span class="tech-pill">Prisma</span>
-                  <span class="tech-pill">PostgreSQL</span>
+                  <span class="tech-pill">Express</span>
+                  <span class="tech-pill">MongoDB</span>
                   <span class="tech-pill">TypeScript</span>
-                  <span class="tech-pill">Tailwind CSS</span>
+                  <span class="tech-pill">Tailwind</span>
                 </div>
                 <div class="profile-meta">
                   <div>
-                    <strong>Focused on</strong>
-                    <p>Modern product engineering and polished user experiences.</p>
+                    <strong>Based in</strong>
+                    <p>Bagerhat, Khulna, Bangladesh</p>
                   </div>
-                  <span class="status-dot"></span>
+                  <span class="status-dot" title="Active & Ready to Collaborate"></span>
                 </div>
               </div>
             </div>
@@ -88,480 +141,385 @@
 
         <div class="hero-metrics reveal">
           <article class="metric-card">
-            <strong>21</strong>
-            <span>Public repositories</span>
+            <strong>B.Sc CSE</strong>
+            <span>North Western University</span>
           </article>
           <article class="metric-card">
-            <strong>5</strong>
-            <span>Curated showcase projects</span>
+            <strong>21+</strong>
+            <span>Public Repositories</span>
           </article>
           <article class="metric-card">
-            <strong>3</strong>
-            <span>Featured live demos</span>
+            <strong>3+</strong>
+            <span>Featured Showcase Builds</span>
           </article>
           <article class="metric-card">
-            <strong>1</strong>
-            <span>Maintained portfolio API</span>
+            <strong>MERN Stack</strong>
+            <span>Primary Specialization</span>
           </article>
         </div>
       </div>
 
-      <div class="hero-particles" aria-hidden="true">
-        <span class="particle p1"></span>
-        <span class="particle p2"></span>
-        <span class="particle p3"></span>
-        <span class="particle p4"></span>
-      </div>
-
       <div class="scroll-indicator" aria-hidden="true">
-        <span>Scroll</span>
+        <span>Scroll Down</span>
         <div class="scroll-line"></div>
       </div>
     </header>
 
     <main>
+      <!-- About Me Section -->
       <section id="about" class="section section-premium">
         <div class="about-shell reveal">
           <div class="about-copy">
             <span class="section-label">ABOUT ME</span>
             <h2>Hi, I’m Sheikh Raski Rayhan</h2>
             <p class="about-intro">
-              Full stack developer building scalable, high-performance web applications for modern product teams.
+              I am a passionate software engineering student pursuing my <strong>B.Sc. in Computer Science & Engineering</strong> at <strong>North Western University, Khulna</strong>. I specialize in crafting modern, responsive web applications using the MERN stack.
             </p>
+
+            <div class="about-story-box">
+              <h3>🚀 My Programming Journey</h3>
+              <p>
+                My journey began with fundamental problem solving in C/C++ during my early computer science courses. As I learned core software architecture, my curiosity shifted towards web development. Building dynamic frontend components with JavaScript and React quickly grew into building complete full-stack web applications with Node.js, Express, and databases.
+              </p>
+            </div>
 
             <div class="about-highlights-grid">
               <article class="mini-card">
-                <span class="mini-icon">🧠</span>
+                <span class="mini-icon">💻</span>
                 <div>
-                  <strong>Problem Solver</strong>
-                  <p>Turn complex requirements into elegant solutions.</p>
+                  <strong>Work I Enjoy</strong>
+                  <p>Building clean, responsive UI/UX, RESTful APIs, full-stack MERN apps, and database integration.</p>
                 </div>
               </article>
               <article class="mini-card">
-                <span class="mini-icon">💻</span>
+                <span class="mini-icon">🎨</span>
                 <div>
-                  <strong>Full Stack Dev</strong>
-                  <p>React, Next.js, Node.js, Prisma, PostgreSQL.</p>
+                  <strong>Hobbies & Interests</strong>
+                  <p>Playing cricket & sports, painting, traveling around Bangladesh, and exploring open-source projects.</p>
                 </div>
               </article>
               <article class="mini-card">
                 <span class="mini-icon">⚡</span>
                 <div>
-                  <strong>Performance Focused</strong>
-                  <p>Fast interfaces and efficient backend architecture.</p>
+                  <strong>Personality & Craft</strong>
+                  <p>Detail-oriented, continuous learner, proactive problem solver, and effective communicator.</p>
                 </div>
               </article>
             </div>
 
             <div class="about-quick-stats">
-              <span>✔ 21 public repos</span>
-              <span>✔ React & Next.js</span>
-              <span>✔ Backend APIs</span>
-              <span>✔ Database Design</span>
+              <span>✔ B.Sc in CSE Student</span>
+              <span>✔ MERN Stack Specialist</span>
+              <span>✔ Clean Architecture</span>
+              <span>✔ Responsive Design</span>
             </div>
 
-            <a href="assets/resume.txt" download class="btn btn-primary">Download Resume</a>
+            <div class="about-actions" style="margin-top: 1.5rem;">
+              <a href="assets/resume.txt" download class="btn btn-primary">Download Resume</a>
+              <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
           </div>
 
           <div class="about-timeline">
             <article class="timeline-card reveal-hover">
               <div class="timeline-icon">🎓</div>
               <div>
-                <h3>Education</h3>
-                <p>North Western University · B.Sc. in Computer Science & Engineering</p>
+                <h3>Academic Background</h3>
+                <p>North Western University · B.Sc. in Computer Science & Engineering (Khulna, Bangladesh)</p>
               </div>
             </article>
             <article class="timeline-card reveal-hover">
-              <div class="timeline-icon">💼</div>
+              <div class="timeline-icon">💻</div>
               <div>
-                <h3>Current Focus</h3>
-                <p>Building scalable full-stack applications using React, Next.js, Node.js, Prisma, PostgreSQL.</p>
+                <h3>Core Stack Focus</h3>
+                <p>Developing scalable web apps using React, Next.js, Node.js, Express, MongoDB, and Tailwind CSS.</p>
               </div>
             </article>
             <article class="timeline-card reveal-hover">
               <div class="timeline-icon">🎯</div>
               <div>
-                <h3>Career Goal</h3>
-                <p>Become a software engineer building impactful products for millions of users.</p>
+                <h3>Career Aspirations</h3>
+                <p>To join a forward-thinking engineering team as a Software Engineer / Full Stack Developer.</p>
               </div>
             </article>
             <article class="timeline-card reveal-hover">
-              <div class="timeline-icon">❤️</div>
+              <div class="timeline-icon">🌟</div>
               <div>
-                <h3>Passion</h3>
-                <p>Creating fast, scalable, and beautiful digital experiences.</p>
+                <h3>Personal Values</h3>
+                <p>Continuous learning, writing maintainable clean code, and creating user-focused software.</p>
               </div>
             </article>
           </div>
         </div>
       </section>
 
+      <!-- Skills Section -->
       <section id="skills" class="section section-alt">
         <div class="section-heading reveal">
-          <p class="eyebrow">Skills</p>
-          <h2>An applied, modern stack built for product-focused engineering.</h2>
+          <p class="eyebrow">Skills & Capabilities</p>
+          <h2>Technical proficiency categorized for modern web engineering.</h2>
         </div>
+
         <div class="skills-grid">
           <article class="skill-card reveal">
             <div class="skill-card-top">
               <span class="skill-icon">⚛️</span>
               <div>
-                <h3>Frontend</h3>
-                <p>React • Next.js • Tailwind</p>
+                <h3>Frontend Development</h3>
+                <p>React • Next.js • Tailwind CSS • HTML5/CSS3</p>
               </div>
             </div>
             <div class="progress-row">
-              <div class="progress-label"><span>Applied focus</span><strong>Core</strong></div>
-              <div class="bar"><span style="width: 96%"></span></div>
+              <div class="progress-label"><span>Mastery Level</span><strong>92%</strong></div>
+              <div class="bar"><span style="width: 92%"></span></div>
             </div>
-            <div class="skill-meta"><span>Core craft</span><span>UI engineering</span></div>
+            <div class="skill-badges">
+              <span class="skill-chip">React.js</span>
+              <span class="skill-chip">Next.js</span>
+              <span class="skill-chip">JavaScript (ES6+)</span>
+              <span class="skill-chip">Tailwind CSS</span>
+              <span class="skill-chip">HTML5 / CSS3</span>
+            </div>
           </article>
 
           <article class="skill-card reveal">
             <div class="skill-card-top">
-              <span class="skill-icon">🧠</span>
+              <span class="skill-icon">⚙️</span>
               <div>
-                <h3>Backend</h3>
-                <p>Node.js • Express • REST APIs</p>
+                <h3>Backend Engineering</h3>
+                <p>Node.js • Express.js • RESTful APIs • Auth</p>
               </div>
             </div>
             <div class="progress-row">
-              <div class="progress-label"><span>Applied focus</span><strong>Core</strong></div>
-              <div class="bar"><span style="width: 92%"></span></div>
+              <div class="progress-label"><span>Mastery Level</span><strong>88%</strong></div>
+              <div class="bar"><span style="width: 88%"></span></div>
             </div>
-            <div class="skill-meta"><span>Applied projects</span><span>API design</span></div>
+            <div class="skill-badges">
+              <span class="skill-chip">Node.js</span>
+              <span class="skill-chip">Express.js</span>
+              <span class="skill-chip">REST APIs</span>
+              <span class="skill-chip">JWT / Auth</span>
+            </div>
           </article>
 
           <article class="skill-card reveal">
             <div class="skill-card-top">
               <span class="skill-icon">🗄️</span>
               <div>
-                <h3>Database</h3>
-                <p>PostgreSQL • Prisma • MongoDB</p>
+                <h3>Databases & Data</h3>
+                <p>MongoDB • PostgreSQL • Prisma ORM</p>
               </div>
             </div>
             <div class="progress-row">
-              <div class="progress-label"><span>Applied focus</span><strong>Core</strong></div>
-              <div class="bar"><span style="width: 90%"></span></div>
+              <div class="progress-label"><span>Mastery Level</span><strong>85%</strong></div>
+              <div class="bar"><span style="width: 85%"></span></div>
             </div>
-            <div class="skill-meta"><span>Applied projects</span><span>Data modeling</span></div>
+            <div class="skill-badges">
+              <span class="skill-chip">MongoDB</span>
+              <span class="skill-chip">PostgreSQL</span>
+              <span class="skill-chip">Prisma</span>
+              <span class="skill-chip">Mongoose</span>
+            </div>
           </article>
 
           <article class="skill-card reveal">
             <div class="skill-card-top">
               <span class="skill-icon">💬</span>
               <div>
-                <h3>Languages</h3>
-                <p>JavaScript • TypeScript • C++</p>
+                <h3>Programming Languages</h3>
+                <p>JavaScript • TypeScript • C / C++</p>
               </div>
             </div>
             <div class="progress-row">
-              <div class="progress-label"><span>Applied focus</span><strong>Core</strong></div>
-              <div class="bar"><span style="width: 88%"></span></div>
+              <div class="progress-label"><span>Mastery Level</span><strong>86%</strong></div>
+              <div class="bar"><span style="width: 86%"></span></div>
             </div>
-            <div class="skill-meta"><span>Daily practice</span><span>Clean logic</span></div>
+            <div class="skill-badges">
+              <span class="skill-chip">JavaScript</span>
+              <span class="skill-chip">TypeScript</span>
+              <span class="skill-chip">C++</span>
+              <span class="skill-chip">C</span>
+            </div>
           </article>
 
           <article class="skill-card reveal">
             <div class="skill-card-top">
               <span class="skill-icon">🛠️</span>
               <div>
-                <h3>Tools</h3>
-                <p>Git • GitHub • VS Code • Figma</p>
+                <h3>Tools & Workflow</h3>
+                <p>Git • GitHub • VS Code • Postman</p>
               </div>
             </div>
             <div class="progress-row">
-              <div class="progress-label"><span>Applied focus</span><strong>Core</strong></div>
+              <div class="progress-label"><span>Mastery Level</span><strong>94%</strong></div>
               <div class="bar"><span style="width: 94%"></span></div>
             </div>
-            <div class="skill-meta"><span>Daily workflow</span><span>Collaboration</span></div>
+            <div class="skill-badges">
+              <span class="skill-chip">Git & GitHub</span>
+              <span class="skill-chip">VS Code</span>
+              <span class="skill-chip">Postman</span>
+              <span class="skill-chip">Figma</span>
+            </div>
           </article>
 
           <article class="skill-card reveal">
             <div class="skill-card-top">
               <span class="skill-icon">🚀</span>
               <div>
-                <h3>DevOps</h3>
-                <p>Vercel • Render • CI/CD basics</p>
+                <h3>Deployment & Cloud</h3>
+                <p>Vercel • Netlify • Render • Firebase</p>
               </div>
             </div>
             <div class="progress-row">
-              <div class="progress-label"><span>Current focus</span><strong>Growing</strong></div>
-              <div class="bar"><span style="width: 82%"></span></div>
+              <div class="progress-label"><span>Mastery Level</span><strong>84%</strong></div>
+              <div class="bar"><span style="width: 84%"></span></div>
             </div>
-            <div class="skill-meta"><span>Learning path</span><span>Deployment</span></div>
+            <div class="skill-badges">
+              <span class="skill-chip">Vercel</span>
+              <span class="skill-chip">Netlify</span>
+              <span class="skill-chip">Firebase</span>
+              <span class="skill-chip">Render</span>
+            </div>
           </article>
         </div>
       </section>
 
-      <section id="projects" class="section">
+      <!-- Educational Qualification Section -->
+      <section id="education" class="section">
         <div class="section-heading reveal">
-          <p class="eyebrow">Featured Projects</p>
-          <h2>Selected work that reflects product depth and engineering maturity.</h2>
+          <p class="eyebrow">Academic Background</p>
+          <h2>Educational qualifications and academic achievements.</h2>
         </div>
-        <div id="projectGrid" class="project-grid"></div>
+
+        <div class="education-container reveal">
+          <div class="education-card">
+            <div class="education-badge">Undergraduate</div>
+            <div class="education-header">
+              <div class="edu-icon">🎓</div>
+              <div>
+                <h3>Bachelor of Science (B.Sc.) in Computer Science & Engineering (CSE)</h3>
+                <h4 class="edu-institution">North Western University</h4>
+                <p class="edu-location">📍 Khulna, Bangladesh</p>
+              </div>
+            </div>
+            <div class="education-body">
+              <p>
+                Pursuing a comprehensive curriculum in Computer Science and Engineering, gaining strong foundations in core computer science theory, algorithms, software design, and practical full-stack application development.
+              </p>
+              <div class="coursework-box">
+                <strong>Key Coursework & Competencies:</strong>
+                <ul class="course-list">
+                  <li>Data Structures & Algorithms</li>
+                  <li>Database Management Systems (DBMS)</li>
+                  <li>Software Engineering & System Analysis</li>
+                  <li>Web Engineering & Internet Technologies</li>
+                  <li>Object-Oriented Programming (C++ / Java / JS)</li>
+                  <li>Computer Networks & Operating Systems</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
+      <!-- Experience Section -->
       <section id="experience" class="section section-alt">
         <div class="section-heading reveal">
-          <p class="eyebrow">Experience Timeline</p>
-          <h2>A clear path from learning to building high-value products.</h2>
+          <p class="eyebrow">Experience & Growth</p>
+          <h2>Practical experience in building products and web applications.</h2>
         </div>
         <div class="timeline reveal">
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-card">
-              <p class="timeline-label">Education</p>
-              <h3>Computer Science Foundation</h3>
-              <p>Building a rigorous understanding of algorithms, systems, and software principles.</p>
+              <p class="timeline-label">Current</p>
+              <h3>Full Stack Development Projects</h3>
+              <p>Building real-world web applications utilizing React, Node.js, Express, MongoDB, and Firebase with responsive UI/UX designs.</p>
             </div>
           </div>
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-card">
-              <p class="timeline-label">Internship</p>
-              <h3>Hands-on Product Development</h3>
-              <p>Collaborating on client work and translating product requirements into production-ready features.</p>
+              <p class="timeline-label">Academic</p>
+              <h3>Computer Science Undergraduate Studies</h3>
+              <p>Studying B.Sc. in CSE at North Western University, solving algorithmic problems and working on team software projects.</p>
             </div>
           </div>
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-card">
-              <p class="timeline-label">Freelance</p>
-              <h3>Independent Engineering</h3>
-              <p>Delivering polished interfaces, backend services, and full-stack experiences for real users.</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-card">
-              <p class="timeline-label">Current Learning</p>
-              <h3>Modern Architecture & Scale</h3>
-              <p>Expanding capabilities in system design, auth patterns, and distributed tooling.</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-card">
-              <p class="timeline-label">Future Goal</p>
-              <h3>High-impact Engineering</h3>
-              <p>Contributing to ambitious products that shape how people work and connect online.</p>
+              <p class="timeline-label">Freelance & Client Projects</p>
+              <h3>Independent Web Engineering</h3>
+              <p>Designing custom landing pages, responsive storefronts, and interactive dashboards for clients and open source showcases.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="services" class="section">
+      <!-- Projects Section -->
+      <section id="projects" class="section">
         <div class="section-heading reveal">
-          <p class="eyebrow">Services</p>
-          <h2>Comprehensive support for product teams and founders.</h2>
+          <p class="eyebrow">Featured Work</p>
+          <h2>Showcase projects demonstrating product depth and code quality.</h2>
         </div>
-        <div class="service-grid">
-          <article class="service-card reveal">
-            <span class="service-icon">💻</span>
-            <h3>Full Stack Development</h3>
-            <p>End-to-end delivery of modern web applications with polished UX and reliable architecture.</p>
-          </article>
-          <article class="service-card reveal">
-            <span class="service-icon">🔌</span>
-            <h3>REST API Development</h3>
-            <p>Secure, scalable backend services built for real-world integrations and product growth.</p>
-          </article>
-          <article class="service-card reveal">
-            <span class="service-icon">🔐</span>
-            <h3>Authentication Systems</h3>
-            <p>Robust auth flows with protected routes, role-based access, and secure onboarding.</p>
-          </article>
-          <article class="service-card reveal">
-            <span class="service-icon">📊</span>
-            <h3>Dashboard Development</h3>
-            <p>Insightful admin panels and analytics interfaces designed for clarity and speed.</p>
-          </article>
-          <article class="service-card reveal">
-            <span class="service-icon">🗂️</span>
-            <h3>Database Design</h3>
-            <p>Clear schemas, scalable relationships, and resilient data models for long-term growth.</p>
-          </article>
-          <article class="service-card reveal">
-            <span class="service-icon">⚡</span>
-            <h3>Performance Optimization</h3>
-            <p>Fast load times, efficient rendering, and thoughtful engineering for premium experiences.</p>
-          </article>
-        </div>
+        <div id="projectGrid" class="project-grid"></div>
       </section>
 
-      <section id="highlights" class="section section-alt">
+      <!-- Contact Information Section -->
+      <section id="contact" class="section section-alt">
         <div class="section-heading reveal">
-          <p class="eyebrow">Building Milestones</p>
-          <h2>Focused growth backed by measurable progress and practical execution.</h2>
-        </div>
-        <div class="highlight-grid">
-          <div class="glass-panel reveal">
-            <h3>What I have shipped</h3>
-            <ul>
-              <li>Built a portfolio with a static frontend and Express API</li>
-              <li>Shipped responsive interfaces with live public demos</li>
-              <li>Expanded from UI work into APIs, auth, and data modeling</li>
-            </ul>
-          </div>
-          <div class="glass-panel reveal">
-            <h3>Current learning</h3>
-            <ul>
-              <li>System design and production-ready architecture</li>
-              <li>Testing, validation, and secure defaults</li>
-              <li>Accessibility, performance, and deployment workflows</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section id="opensource" class="section">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Open Source & Community</p>
-          <h2>Contributing to the ecosystem through thoughtful, reusable work.</h2>
-        </div>
-        <div class="opensource-grid">
-          <article class="glass-panel reveal">
-            <h3>Open Source Contributions</h3>
-            <p>Sharing practical implementations, UI patterns, and developer-friendly solutions with the community.</p>
-          </article>
-          <article class="glass-panel reveal">
-            <h3>Learning Philosophy</h3>
-            <p>Combining curiosity, documentation, and iteration to turn ideas into reliable systems.</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="techstack" class="section section-alt">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Tech Stack</p>
-          <h2>Specialized tools and frameworks for modern product development.</h2>
-        </div>
-        <div class="chip-row reveal">
-          <span>React</span><span>Next.js</span><span>TypeScript</span><span>Node.js</span><span>Express</span><span>Prisma</span><span>PostgreSQL</span><span>MongoDB</span><span>Tailwind</span><span>Figma</span><span>GitHub</span><span>Vercel</span>
-        </div>
-      </section>
-
-      <section id="github" class="section">
-        <div class="section-heading reveal">
-          <p class="eyebrow">GitHub Statistics</p>
-          <h2>Consistent momentum, strong curiosity, and steady growth.</h2>
-        </div>
-        <div class="stats-grid">
-          <div class="stat-card reveal">
-            <strong>21</strong>
-            <span>Public repositories</span>
-          </div>
-          <div class="stat-card reveal">
-            <strong>5</strong>
-            <span>Showcase projects</span>
-          </div>
-          <div class="stat-card reveal">
-            <strong>JS / TS</strong>
-            <span>Primary languages</span>
-          </div>
-          <div class="stat-card reveal">
-            <strong>Open</strong>
-            <span>To meaningful builds</span>
-          </div>
-        </div>
-      </section>
-
-      <section id="testimonials" class="section section-alt">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Working Principles</p>
-          <h2>How I approach collaboration and craft.</h2>
-        </div>
-        <div class="swiper reveal">
-          <div class="swiper-wrapper">
-            <article class="swiper-slide testimonial-card">
-              <p>“Clarify the goal, make the interface obvious, and keep the system easy to extend.”</p>
-              <div class="testimonial-meta">
-                <strong>Product principle</strong>
-                <span>Clear decisions and thoughtful execution</span>
-              </div>
-            </article>
-            <article class="swiper-slide testimonial-card">
-              <p>“Good documentation is part of the product. It should help the next person run, understand, and improve the project.”</p>
-              <div class="testimonial-meta">
-                <strong>Maintainer principle</strong>
-                <span>Reproducible setup and honest scope</span>
-              </div>
-            </article>
-            <article class="swiper-slide testimonial-card">
-              <p>“Polish is useful when it improves comprehension. I pair visual hierarchy with accessible structure and resilient data flows.”</p>
-              <div class="testimonial-meta">
-                <strong>Engineering principle</strong>
-                <span>Accessible, resilient, and maintainable by default</span>
-              </div>
-            </article>
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-      </section>
-
-      <section id="faq" class="section">
-        <div class="section-heading reveal">
-          <p class="eyebrow">FAQ</p>
-          <h2>Answers that help clients and recruiters understand my approach.</h2>
-        </div>
-        <div class="faq-list">
-          <details class="faq-item reveal">
-            <summary>What kind of work do you enjoy most?</summary>
-            <p>I enjoy building thoughtful products where strong engineering and elegant UX come together.</p>
-          </details>
-          <details class="faq-item reveal">
-            <summary>Do you work with startups or agencies?</summary>
-            <p>Yes. I collaborate well with founders, small teams, and companies that want modern digital products.</p>
-          </details>
-          <details class="faq-item reveal">
-            <summary>What technologies do you use most?</summary>
-            <p>React, Next.js, Node.js, TypeScript, Prisma, PostgreSQL, and modern UI tooling.</p>
-          </details>
-        </div>
-      </section>
-
-      <section id="blog" class="section section-alt">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Blog Preview</p>
-          <h2>Notes on product building, engineering habits, and modern web craft.</h2>
-        </div>
-        <div class="blog-grid">
-          <article class="blog-card reveal">
-            <h3>Designing for Performance Without Sacrificing Beauty</h3>
-            <p>Practical techniques for building fast, polished experiences that still feel premium.</p>
-          </article>
-          <article class="blog-card reveal">
-            <h3>Why Clean APIs Matter for Product Growth</h3>
-            <p>How well-structured backend systems improve collaboration, reliability, and scaling.</p>
-          </article>
-          <article class="blog-card reveal">
-            <h3>Building a Strong Frontend Foundation</h3>
-            <p>Creating resilient interfaces with maintainable architecture and thoughtful UX.</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="contact" class="section">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Contact</p>
-          <h2>Let’s build something exceptional together.</h2>
+          <p class="eyebrow">Contact Information</p>
+          <h2>Let’s connect and create something impactful together.</h2>
         </div>
         <div class="contact-grid">
           <div class="glass-panel reveal contact-links">
-            <h3>Connect directly</h3>
-            <a href="mailto:raskirayhan@gmail.com"><span>✉️</span> raskirayhan@gmail.com</a>
-            <a href="https://wa.me/8801779181871" target="_blank" rel="noreferrer"><span>📱</span> WhatsApp</a>
-            <a href="https://www.linkedin.com/in/sheikh-raski-rayhan-36b588334/" target="_blank" rel="noreferrer"><span>💼</span> LinkedIn</a>
-            <a href="https://github.com/raskirayhan" target="_blank" rel="noreferrer"><span>🐙</span> GitHub</a>
-            <a href="https://www.facebook.com/raihansk.raski/" target="_blank" rel="noreferrer"><span>📘</span> Facebook</a>
-            <a href="assets/resume.txt" download><span>⬇️</span> Download Resume</a>
+            <h3>Direct Contact Details</h3>
+            <div class="contact-info-list">
+              <div class="contact-item">
+                <span class="c-icon">✉️</span>
+                <div>
+                  <strong>Email Address</strong>
+                  <a href="mailto:raskirayhan@gmail.com">raskirayhan@gmail.com</a>
+                </div>
+              </div>
+              <div class="contact-item">
+                <span class="c-icon">📞</span>
+                <div>
+                  <strong>Phone Number</strong>
+                  <a href="tel:01995785133">01995785133</a>
+                </div>
+              </div>
+              <div class="contact-item">
+                <span class="c-icon">💬</span>
+                <div>
+                  <strong>WhatsApp Number</strong>
+                  <a href="https://wa.me/8801779181871" target="_blank" rel="noreferrer">01779181871 (+8801779181871)</a>
+                </div>
+              </div>
+              <div class="contact-item">
+                <span class="c-icon">📍</span>
+                <div>
+                  <strong>Location</strong>
+                  <p>Bagerhat, Khulna, Bangladesh</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-social-section" style="margin-top: 1.5rem;">
+              <h4>Social Profiles</h4>
+              <div class="contact-social-row">
+                <a href="https://github.com/raskirayhan" target="_blank" rel="noreferrer" class="btn btn-secondary btn-sm">GitHub</a>
+                <a href="https://www.linkedin.com/in/sheikh-raski-rayhan-36b588334?originalSubdomain=bd" target="_blank" rel="noreferrer" class="btn btn-secondary btn-sm">LinkedIn</a>
+                <a href="https://www.facebook.com/skraskirayhan/" target="_blank" rel="noreferrer" class="btn btn-secondary btn-sm">Facebook</a>
+              </div>
+            </div>
           </div>
 
           <form class="contact-form reveal" id="contactForm">
+            <h3>Send a Message</h3>
             <input type="text" name="name" placeholder="Your Name" required />
             <input type="email" name="email" placeholder="Your Email" required />
-            <textarea name="message" rows="5" placeholder="Tell me about your project" required></textarea>
+            <textarea name="message" rows="5" placeholder="Write your message here..." required></textarea>
             <button type="submit" class="btn btn-primary magnetic">Send Message</button>
             <p id="form-status" class="form-status"></p>
           </form>
@@ -569,20 +527,65 @@
       </section>
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
-      <div>
+      <div class="footer-content">
         <a href="#home" class="brand footer-brand">Sheikh Raski Rayhan</a>
-        <p>Building modern software with clarity, ambition, and a relentless focus on quality.</p>
+        <p>B.Sc. in CSE Student & MERN Stack Developer based in Bagerhat, Khulna.</p>
       </div>
       <div class="footer-links">
         <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </div>
-      <p>© <span id="year"></span> Sheikh Raski Rayhan</p>
-      <a href="#home" class="back-to-top" id="backToTop">↑</a>
+      <p>© <span id="year"></span> Sheikh Raski Rayhan. All rights reserved.</p>
+      <a href="#home" class="back-to-top" id="backToTop" title="Back to Top">↑</a>
     </footer>
 
+    <!-- Interactive Project Details Modal -->
+    <div class="modal-overlay" id="projectModal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
+      <div class="modal-card">
+        <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close details modal">&times;</button>
+        <div class="modal-header">
+          <div class="modal-img-wrap" id="modalImgWrap">
+            <!-- Project Image Inserted Here -->
+          </div>
+          <div class="modal-title-box">
+            <h2 id="modalTitle">Project Details</h2>
+            <div class="modal-tech-list" id="modalTechList">
+              <!-- Tech Pills Inserted Here -->
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-body">
+          <div class="modal-section">
+            <h3>📌 Project Description</h3>
+            <p id="modalDescription"></p>
+          </div>
+
+          <div class="modal-links-row">
+            <a href="#" id="modalLiveLink" target="_blank" rel="noreferrer" class="btn btn-primary btn-sm">🌐 View Live Project</a>
+            <a href="#" id="modalGithubLink" target="_blank" rel="noreferrer" class="btn btn-secondary btn-sm">🐙 Client GitHub Repository</a>
+          </div>
+
+          <div class="modal-grid-box">
+            <div class="modal-box challenge-box">
+              <h3>⚠️ Challenges Faced</h3>
+              <p id="modalChallenges"></p>
+            </div>
+            <div class="modal-box improvement-box">
+              <h3>🚀 Potential Improvements & Future Plans</h3>
+              <p id="modalImprovements"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/framer-motion@11/dist/framer-motion.min.js"></script>
     <script src="script.js"></script>
