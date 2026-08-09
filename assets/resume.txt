@@ -23,8 +23,8 @@ web development using the MERN stack (MongoDB, Express.js, React, Node.js).
 
 My journey began with fundamental problem solving in C/C++ during core CSE 
 coursework. Driven by a desire to craft interactive user experiences, I expanded 
-into JavaScript engineering, building scalable RESTful APIs, responsive frontends, 
-and database-driven web applications with clean, maintainable architecture.
+into JavaScript & TypeScript engineering, building scalable RESTful APIs, responsive 
+frontends, and full-stack service marketplace platforms.
 
 
 TECHNICAL SKILLS
@@ -60,16 +60,18 @@ Full Stack Web Projects & Freelance Engineering
 
 FEATURED PROJECTS
 --------------------------------------------------------------------------------
-1. Flower Storefront & Workshop
-   Description  : A responsive flower storefront with seasonal product displays, 
-                  interactive product cards, shopping cart workflow, and smooth 
-                  CSS micro-animations.
-   Tech Stack   : HTML5, CSS3, JavaScript (ES6+), Responsive CSS Grid
-   Live Demo    : https://raskirayhan.github.io/flower-website/
-   GitHub Repo  : https://github.com/raskirayhan/flower-website
-   Challenges   : Maintaining aspect ratio consistency and fast page rendering 
-                  across mobile, tablet, and desktop viewports.
-   Future Plans : Integrate Node.js/MongoDB e-commerce API with user checkout.
+1. FixItNow - Full-Stack Service Marketplace
+   Description  : A comprehensive full-stack service booking and repair platform 
+                  connecting users with verified technicians. Features role-based 
+                  dashboards, appointment scheduling, real-time booking tracking, 
+                  and customer review workflows.
+   Tech Stack   : TypeScript, Next.js, React, Node.js, Express, MongoDB, Prisma
+   Live Demo    : https://raskirayhan.github.io/FixItNow-/
+   GitHub Repo  : https://github.com/raskirayhan/FixItNow-
+   Challenges   : Architecting complex multi-role authorization (Customer, 
+                  Provider, Admin) and conflicting appointment scheduling logic.
+   Future Plans : Integrate online payment gateway (Stripe/SSLCommerz), WebSockets 
+                  live messaging, and technician GPS tracking.
 
 2. Habit Tracker Application
    Description  : A habit-building application featuring user authentication, 
@@ -81,7 +83,18 @@ FEATURED PROJECTS
                   state persistence.
    Future Plans : Add daily push notifications and friend challenge leaderboards.
 
-3. G3 Architects Studio Portfolio
+3. Flower Storefront & Workshop
+   Description  : A responsive flower storefront with seasonal product displays, 
+                  interactive product cards, shopping cart workflow, and smooth 
+                  CSS micro-animations.
+   Tech Stack   : HTML5, CSS3, JavaScript (ES6+), Responsive CSS Grid
+   Live Demo    : https://raskirayhan.github.io/flower-website/
+   GitHub Repo  : https://github.com/raskirayhan/flower-website
+   Challenges   : Maintaining aspect ratio consistency and fast page rendering 
+                  across mobile, tablet, and desktop viewports.
+   Future Plans : Integrate Node.js/MongoDB e-commerce API with user checkout.
+
+4. G3 Architects Studio Portfolio
    Description  : A modern architecture studio landing page focused on bold 
                   typography, service showcases, team highlights, and contact form.
    Tech Stack   : HTML5, Vanilla CSS, JavaScript, CSS Grid & Flexbox

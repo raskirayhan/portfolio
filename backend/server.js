@@ -10,14 +10,15 @@ app.use(express.json());
 const projects = [
   {
     id: 1,
-    title: 'Flower Storefront & Workshop',
-    description: 'A responsive flower storefront featuring seasonal collection displays, interactive product cards, shopping cart workflow, and smooth micro-animations.',
-    tech: ['HTML5', 'CSS3', 'JavaScript (ES6+)', 'Responsive Design'],
-    github: 'https://github.com/raskirayhan/flower-website',
-    demo: 'https://raskirayhan.github.io/flower-website/',
-    screenshot: 'image/flower_workshop/screencapture-raskirayhan-github-io-flower-website-2026-07-06-01_53_14.png',
-    challenges: 'Designing a fully responsive grid system across mobile, tablet, and ultra-wide desktops while maintaining visual hierarchy, aspect ratios, and fast image loading speeds.',
-    improvements: 'Plan to integrate a full dynamic e-commerce shopping cart backed by Node.js and MongoDB with user authentication and Stripe payment integration.'
+    title: 'FixItNow - Full-Stack Service Marketplace',
+    description: 'A comprehensive full-stack service booking and repair platform connecting customers with verified technicians. Features role-based dashboards, appointment scheduling, real-time booking tracking, and customer review workflows.',
+    tech: ['TypeScript', 'Next.js', 'React', 'Node.js', 'Express', 'MongoDB', 'Prisma'],
+    github: 'https://github.com/raskirayhan/FixItNow-',
+    demo: 'https://raskirayhan.github.io/FixItNow-/',
+    screenshot: '',
+    color: 'linear-gradient(135deg, #0ea5e9, #6366f1)',
+    challenges: 'Architecting complex multi-role authorization (Customer, Provider, Admin) while preventing conflicting appointment time slot bookings in real-time.',
+    improvements: 'Adding online payment gateway integration (Stripe / SSLCommerz), WebSockets live chat between customer & technician, and GPS location tracking.'
   },
   {
     id: 2,
@@ -32,6 +33,17 @@ const projects = [
   },
   {
     id: 3,
+    title: 'Flower Storefront & Workshop',
+    description: 'A responsive flower storefront featuring seasonal collection displays, interactive product cards, shopping cart workflow, and smooth micro-animations.',
+    tech: ['HTML5', 'CSS3', 'JavaScript (ES6+)', 'Responsive Design'],
+    github: 'https://github.com/raskirayhan/flower-website',
+    demo: 'https://raskirayhan.github.io/flower-website/',
+    screenshot: 'image/flower_workshop/screencapture-raskirayhan-github-io-flower-website-2026-07-06-01_53_14.png',
+    challenges: 'Designing a fully responsive grid system across mobile, tablet, and ultra-wide desktops while maintaining visual hierarchy, aspect ratios, and fast image loading speeds.',
+    improvements: 'Plan to integrate a full dynamic e-commerce shopping cart backed by Node.js and MongoDB with user authentication and Stripe payment integration.'
+  },
+  {
+    id: 4,
     title: 'G3 Architects Studio Portfolio',
     description: 'A modern, high-impact architecture studio landing page focused on bold typography, responsive service showcases, team highlights, and contact integration.',
     tech: ['HTML5', 'Vanilla CSS', 'JavaScript', 'CSS Grid & Flexbox'],

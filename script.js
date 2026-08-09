@@ -30,15 +30,16 @@ let activeProjectsList = [];
 
 const fallbackProjects = [
   {
-    id: 'flower-website',
-    title: 'Flower Storefront & Workshop',
-    description: 'A responsive flower storefront featuring seasonal collection displays, interactive product cards, shopping cart workflow, and smooth micro-animations.',
-    tech: ['HTML5', 'CSS3', 'JavaScript (ES6+)', 'Responsive Design'],
-    github: 'https://github.com/raskirayhan/flower-website',
-    demo: 'https://raskirayhan.github.io/flower-website/',
-    screenshot: 'image/flower_workshop/screencapture-raskirayhan-github-io-flower-website-2026-07-06-01_53_14.png',
-    challenges: 'Designing a fully responsive grid system across mobile, tablet, and ultra-wide desktops while maintaining visual hierarchy, aspect ratios, and fast image loading speeds.',
-    improvements: 'Plan to integrate a full dynamic e-commerce shopping cart backed by Node.js and MongoDB with user authentication and Stripe payment integration.'
+    id: 'fixitnow',
+    title: 'FixItNow - Full-Stack Service Marketplace',
+    description: 'A comprehensive full-stack service booking and repair platform connecting customers with verified technicians. Features role-based dashboards, appointment scheduling, real-time booking tracking, and customer review workflows.',
+    tech: ['TypeScript', 'Next.js', 'React', 'Node.js', 'Express', 'MongoDB', 'Prisma'],
+    github: 'https://github.com/raskirayhan/FixItNow-',
+    demo: 'https://raskirayhan.github.io/FixItNow-/',
+    screenshot: '',
+    color: 'linear-gradient(135deg, #0ea5e9, #6366f1)',
+    challenges: 'Architecting complex multi-role authorization (Customer, Provider, Admin) while preventing conflicting appointment time slot bookings in real-time.',
+    improvements: 'Adding online payment gateway integration (Stripe / SSLCommerz), WebSockets live chat between customer & technician, and GPS location tracking.'
   },
   {
     id: 'habit-tracker',
@@ -50,6 +51,17 @@ const fallbackProjects = [
     screenshot: 'image/habbit_trucker/screencapture-habit-tracker-najifjawoad-netlify-app-2026-07-06-01_55_17.png',
     challenges: 'Managing real-time state synchronization for habit completion counters and timezone adjustments across user accounts while ensuring secure Firebase authentication.',
     improvements: 'Implement push notifications for daily habit reminders, social habit challenges among friends, and exported CSV progress reports.'
+  },
+  {
+    id: 'flower-website',
+    title: 'Flower Storefront & Workshop',
+    description: 'A responsive flower storefront featuring seasonal collection displays, interactive product cards, shopping cart workflow, and smooth micro-animations.',
+    tech: ['HTML5', 'CSS3', 'JavaScript (ES6+)', 'Responsive Design'],
+    github: 'https://github.com/raskirayhan/flower-website',
+    demo: 'https://raskirayhan.github.io/flower-website/',
+    screenshot: 'image/flower_workshop/screencapture-raskirayhan-github-io-flower-website-2026-07-06-01_53_14.png',
+    challenges: 'Designing a fully responsive grid system across mobile, tablet, and ultra-wide desktops while maintaining visual hierarchy, aspect ratios, and fast image loading speeds.',
+    improvements: 'Plan to integrate a full dynamic e-commerce shopping cart backed by Node.js and MongoDB with user authentication and Stripe payment integration.'
   },
   {
     id: 'g3-architects',
@@ -135,7 +147,10 @@ function renderProjects(projects) {
           ${
             project.screenshot
               ? `<div class="project-visual"><img src="${project.screenshot}" alt="${project.title} screenshot" style="width: 100%; height: 100%; object-fit: cover;"></div>`
-              : `<div class="project-visual" style="background: linear-gradient(135deg, var(--accent), var(--accent-2));"></div>`
+              : `<div class="project-visual" style="background: ${project.color || 'linear-gradient(135deg, var(--accent), var(--accent-2))'}; display: grid; place-items: center; padding: 1.5rem; text-align: center;">
+                   <div style="font-size: 2.5rem;">🛠️</div>
+                   <strong style="color: white; font-size: 1.1rem; margin-top: 0.5rem;">${project.title}</strong>
+                 </div>`
           }
           <div class="project-body">
             <h3>${project.title}</h3>
@@ -163,7 +178,12 @@ window.openProjectModal = function (index) {
 
   modalImgWrap.innerHTML = project.screenshot
     ? `<img src="${project.screenshot}" alt="${project.title} full preview">`
-    : `<div style="height: 200px; background: linear-gradient(135deg, var(--accent), var(--accent-2));"></div>`;
+    : `<div style="height: 220px; background: ${project.color || 'linear-gradient(135deg, var(--accent), var(--accent-2))'}; display: grid; place-items: center; color: white; padding: 1.5rem; text-align: center;">
+         <div>
+           <div style="font-size: 3rem; margin-bottom: 0.5rem;">🛠️</div>
+           <h2>${project.title}</h2>
+         </div>
+       </div>`;
 
   modalTitle.textContent = project.title;
   modalTechList.innerHTML = project.tech.map((t) => `<span class="skill-chip">${t}</span>`).join('');
