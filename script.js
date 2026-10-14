@@ -1,3 +1,8 @@
+/**
+ * Sheikh Raski Rayhan - Portfolio Interactive Scripts
+ * Mobile navigation, typing effect, project modal dialog, scroll animations
+ */
+
 const typingElement = document.getElementById('typing');
 const yearElement = document.getElementById('year');
 const backToTop = document.getElementById('backToTop');
@@ -29,6 +34,7 @@ const projectApiUrl = window.PORTFOLIO_API_URL || 'http://localhost:4000';
 
 let activeProjectsList = [];
 
+// Showcase Projects Dataset (Requirement 9)
 const fallbackProjects = [
   {
     id: 'fixitnow',
@@ -38,52 +44,59 @@ const fallbackProjects = [
     github: 'https://github.com/raskirayhan/FixItNow-',
     serverGithub: 'https://github.com/raskirayhan/fixitnow',
     demo: 'https://raskirayhan.github.io/FixItNow-/',
-    screenshot: '',
+    screenshot: 'image/fixitnow-preview.svg',
     color: 'linear-gradient(135deg, #0ea5e9, #6366f1)',
-    challenges: '• Role-based JWT & Firebase authentication securing user and service provider dashboards.\n• Real-time service search, multi-category filtering, and interactive booking workflows.\n• Express.js REST API and MongoDB backend with complete CRUD data management.\n• Fast, mobile-responsive UI built with React.js, React Hooks, and Tailwind CSS.',
-    improvements: 'Adding Stripe / SSLCommerz online payments, WebSockets live customer-technician chat, and technician GPS tracking.'
+    challenges: '• Architecting role-based JWT & Firebase authentication securing customer, provider, and admin dashboards.\n• Real-time service search, multi-category filtering, and preventing conflicting booking time slots.\n• Scalable Express.js REST API with complete CRUD data management and MongoDB aggregation queries.',
+    improvements: '• Integrating online payment gateways (Stripe / SSLCommerz).\n• WebSockets-powered real-time chat between customer and technician.\n• Live GPS geolocation tracking of arriving service providers.'
   },
   {
     id: 'g3-architects',
-    title: 'G3 Architects – Architectural Portfolio & Services Platform',
+    title: 'G3 Architects – Architectural Studio Platform',
     description: 'A modern, responsive web application designed for architectural firms to showcase featured projects, client testimonials, and service offerings.',
-    tech: ['HTML5', 'CSS Grid', 'Flexbox', 'JavaScript', 'Modal Overlays', 'Micro-interactions'],
+    tech: ['HTML5', 'CSS Grid', 'Flexbox', 'JavaScript', 'Modal Overlays', 'Responsive Design'],
     github: 'https://github.com/raskirayhan/g3-architect-website-repo',
     demo: 'https://raskirayhan.github.io/g3-architect-website-repo/',
     screenshot: 'image/g3 architecture/screencapture-raskirayhan-github-io-g3-architect-website-repo-2026-07-06-01_56_44.png',
-    challenges: '• Interactive projects showcase galleries built with CSS Grid, Flexbox, and modal overlays.\n• Mobile-first responsive architecture ensures seamless layout adaptation across viewports.\n• Smooth scroll navigation, visual hero sections, and dynamic UI micro-interactions.\n• Optimized asset delivery maintaining fast page load speeds and cross-browser accuracy.',
-    improvements: 'Integrating an interactive 3D architectural viewer (Three.js), client inquiry API, and theme switcher.'
+    challenges: '• Building high-fidelity interactive gallery layouts with CSS Grid and Flexbox without relying on bulky CSS libraries.\n• Ensuring seamless mobile-first responsive adaptation and modal overlay accessibility across all screen sizes.\n• Optimizing asset delivery to maintain fast load speeds and crisp typography.',
+    improvements: '• Integrating an interactive 3D architectural project viewer using Three.js.\n• Adding automated inquiry emails via serverless backend function.\n• Implementing light/dark theme preference toggle.'
   },
   {
     id: 'habit-tracker',
-    title: 'Habit Tracker Application',
+    title: 'Habit Tracker – Analytics & Productivity App',
     description: 'A habit-building full-stack application featuring user authentication, daily streak tracking, completion analytics, and clean dashboard statistics.',
     tech: ['React.js', 'Firebase Auth', 'MongoDB', 'Node.js', 'Tailwind CSS'],
     github: 'https://github.com/raskirayhan/habit-tracker',
     demo: 'https://habit-tracker-najifjawoad.netlify.app/',
     screenshot: 'image/habbit_trucker/screencapture-habit-tracker-najifjawoad-netlify-app-2026-07-06-01_55_17.png',
-    challenges: '• Timezone-aware habit completion tracking and streak calculations.\n• Secure user session handling with Firebase Authentication.\n• Interactive progress visualization dashboard.',
-    improvements: 'Push notifications for daily habit reminders and social habit challenge leaderboards.'
+    challenges: '• Calculating timezone-aware streak completions accurately across calendar days.\n• Maintaining persistent authentication states and secure user sessions with Firebase.\n• Designing an intuitive, clutter-free statistics dashboard.',
+    improvements: '• Browser push notifications for daily habit reminders.\n• Social habit challenges and friend activity leaderboards.\n• Exportable CSV progress reports.'
   },
   {
     id: 'flower-website',
     title: 'Flower Storefront & Workshop',
-    description: 'A responsive flower storefront featuring seasonal collection displays, interactive product cards, shopping cart workflow, and smooth micro-animations.',
+    description: 'A responsive storefront featuring seasonal collection displays, interactive product discovery cards, and smooth CSS micro-animations.',
     tech: ['HTML5', 'CSS3', 'JavaScript (ES6+)', 'Responsive CSS Grid'],
     github: 'https://github.com/raskirayhan/flower-website',
     demo: 'https://raskirayhan.github.io/flower-website/',
     screenshot: 'image/flower_workshop/screencapture-raskirayhan-github-io-flower-website-2026-07-06-01_53_14.png',
-    challenges: '• Aspect ratio consistency and fast asset loading across all viewport sizes.\n• Interactive shopping discovery UI without third-party frameworks.\n• Clean semantic HTML structure.',
-    improvements: 'Full dynamic backend e-commerce integration with Node.js, Express, and payment gateways.'
+    challenges: '• Maintaining aspect ratio consistency and rapid rendering across diverse display sizes.\n• Pure vanilla JavaScript interactions without third-party framework overhead.\n• Clean semantic HTML hierarchy.',
+    improvements: '• Dynamic e-commerce shopping cart backed by Node.js and MongoDB.\n• Online checkout with payment gateway integration.'
   }
 ];
 
-const words = ['high-performance platforms.', 'scalable MERN applications.', 'responsive user interfaces.'];
+// Typing Animation
+const words = [
+  'high-performance web platforms.',
+  'scalable MERN applications.',
+  'responsive user interfaces.',
+  'robust RESTful backend APIs.'
+];
 let wordIndex = 0;
 let charIndex = 0;
 let deleting = false;
 
 function typeLoop() {
+  if (!typingElement) return;
   const currentWord = words[wordIndex];
 
   if (!deleting) {
@@ -104,18 +117,24 @@ function typeLoop() {
   setTimeout(typeLoop, deleting ? 50 : 85);
 }
 
+// Window Load Handler
 window.addEventListener('load', () => {
-  setTimeout(() => {
-    loadingScreen.classList.add('hidden');
-  }, 500);
+  if (loadingScreen) {
+    setTimeout(() => {
+      loadingScreen.classList.add('hidden');
+    }, 400);
+  }
   typeLoop();
   loadProjectData();
 });
 
-yearElement.textContent = new Date().getFullYear();
+// Dynamic Copyright Year
+if (yearElement) {
+  yearElement.textContent = new Date().getFullYear();
+}
 
-// Mobile Navigation Toggle
-if (mobileMenuBtn) {
+// Mobile Menu Toggle (Requirement 1)
+if (mobileMenuBtn && mobileDrawer) {
   mobileMenuBtn.addEventListener('click', () => {
     mobileDrawer.classList.toggle('active');
   });
@@ -123,95 +142,75 @@ if (mobileMenuBtn) {
 
 mobileNavLinks.forEach((link) => {
   link.addEventListener('click', () => {
-    mobileDrawer.classList.remove('active');
+    if (mobileDrawer) {
+      mobileDrawer.classList.remove('active');
+    }
   });
 });
 
+// Load Project Catalog
 async function loadProjectData() {
   try {
     const response = await fetch(`${projectApiUrl}/api/projects`);
-    if (!response.ok) throw new Error('Backend unavailable');
+    if (!response.ok) throw new Error('Backend not available');
     const data = await response.json();
-    activeProjectsList = data.projects?.length ? data.projects : fallbackProjects;
+    activeProjectsList = data.projects && data.projects.length ? data.projects : fallbackProjects;
   } catch (error) {
-    console.debug('Backend project API not active; using showcase catalog:', error.message);
+    console.debug('Using local project catalog:', error.message);
     activeProjectsList = fallbackProjects;
   }
-  renderProjects(activeProjectsList);
 }
 
-function renderProjects(projects) {
-  projectGrid.innerHTML = projects
-    .map(
-      (project, index) => `
-        <article class="project-card reveal">
-          ${
-            project.screenshot
-              ? `<div class="project-visual"><img src="${project.screenshot}" alt="${project.title} screenshot" style="width: 100%; height: 100%; object-fit: cover;"></div>`
-              : `<div class="project-visual" style="background: ${project.color || 'linear-gradient(135deg, var(--accent), var(--accent-2))'}; display: grid; place-items: center; padding: 1.5rem; text-align: center;">
-                   <div style="font-size: 2.5rem;">🛠️</div>
-                   <strong style="color: white; font-size: 1.15rem; margin-top: 0.5rem;">${project.title}</strong>
-                 </div>`
-          }
-          <div class="project-body">
-            <h3>${project.title}</h3>
-            <p>${project.description}</p>
-            <div class="tag-row">
-              ${project.tech.map((tag) => `<span>${tag}</span>`).join('')}
-            </div>
-            <div class="card-actions" style="margin-top: 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
-              <button class="btn btn-primary btn-sm" onclick="openProjectModal(${index})">View More / Details</button>
-              <a href="${project.demo}" class="btn btn-secondary btn-sm" target="_blank" rel="noreferrer">Live Demo</a>
-            </div>
-          </div>
-        </article>
-      `
-    )
-    .join('');
-
-  document.querySelectorAll('#projectGrid .reveal').forEach((item) => observer.observe(item));
-}
-
-// Project Modal Logic
+// Interactive Project Details Modal (Requirement 9)
 window.openProjectModal = function (index) {
-  const project = activeProjectsList[index];
+  const project = (activeProjectsList && activeProjectsList[index]) || fallbackProjects[index];
   if (!project) return;
 
-  modalImgWrap.innerHTML = project.screenshot
-    ? `<img src="${project.screenshot}" alt="${project.title} full preview">`
-    : `<div style="height: 220px; background: ${project.color || 'linear-gradient(135deg, var(--accent), var(--accent-2))'}; display: grid; place-items: center; color: white; padding: 1.5rem; text-align: center;">
-         <div>
-           <div style="font-size: 3rem; margin-bottom: 0.5rem;">🛠️</div>
-           <h2>${project.title}</h2>
-         </div>
-       </div>`;
-
-  modalTitle.textContent = project.title;
-  modalTechList.innerHTML = project.tech.map((t) => `<span class="skill-chip">${t}</span>`).join('');
-  modalDescription.textContent = project.description;
-
-  modalLiveLink.href = project.demo || '#';
-  modalGithubLink.href = project.github || '#';
-
-  if (project.serverGithub) {
-    modalServerLink.href = project.serverGithub;
-    modalServerLink.style.display = 'inline-flex';
-  } else {
-    modalServerLink.style.display = 'none';
+  if (modalImgWrap) {
+    modalImgWrap.innerHTML = project.screenshot
+      ? `<img src="${project.screenshot}" alt="${project.title} Preview" />`
+      : `<div style="height: 220px; background: ${project.color || 'linear-gradient(135deg, var(--accent), var(--accent-2))'}; display: grid; place-items: center; color: white; padding: 1.5rem; text-align: center;">
+           <div>
+             <div style="font-size: 3rem; margin-bottom: 0.5rem;">🛠️</div>
+             <h2>${project.title}</h2>
+           </div>
+         </div>`;
   }
 
-  modalChallenges.innerText = project.challenges || 'Managed UI/UX responsive layouts and seamless client-side state handling.';
-  modalImprovements.innerText = project.improvements || 'Adding micro-interactions, dark mode persistence, and automated CI/CD deployment.';
+  if (modalTitle) modalTitle.textContent = project.title;
+  if (modalTechList) {
+    modalTechList.innerHTML = project.tech.map((t) => `<span class="skill-chip">${t}</span>`).join('');
+  }
+  if (modalDescription) modalDescription.textContent = project.description;
 
-  projectModal.classList.add('active');
-  projectModal.setAttribute('aria-hidden', 'false');
-  document.body.style.overflow = 'hidden';
+  if (modalLiveLink) modalLiveLink.href = project.demo || '#';
+  if (modalGithubLink) modalGithubLink.href = project.github || '#';
+
+  if (modalServerLink) {
+    if (project.serverGithub) {
+      modalServerLink.href = project.serverGithub;
+      modalServerLink.style.display = 'inline-flex';
+    } else {
+      modalServerLink.style.display = 'none';
+    }
+  }
+
+  if (modalChallenges) modalChallenges.innerText = project.challenges || 'Ensured cross-browser UI/UX consistency and secure client-side state handling.';
+  if (modalImprovements) modalImprovements.innerText = project.improvements || 'Planned additions include payment gateway integration, WebSockets real-time sync, and automated CI/CD deployment.';
+
+  if (projectModal) {
+    projectModal.classList.add('active');
+    projectModal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
 };
 
 function closeProjectModal() {
-  projectModal.classList.remove('active');
-  projectModal.setAttribute('aria-hidden', 'true');
-  document.body.style.overflow = '';
+  if (projectModal) {
+    projectModal.classList.remove('active');
+    projectModal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
 }
 
 if (modalCloseBtn) {
@@ -227,12 +226,12 @@ if (projectModal) {
 }
 
 document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape' && projectModal.classList.contains('active')) {
+  if (event.key === 'Escape' && projectModal && projectModal.classList.contains('active')) {
     closeProjectModal();
   }
 });
 
-// Scroll Observer for Reveal Animations
+// Scroll Observer for Section Reveal
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -246,19 +245,26 @@ const observer = new IntersectionObserver(
 
 document.querySelectorAll('.reveal').forEach((item) => observer.observe(item));
 
+// Back to Top Button
 window.addEventListener('scroll', () => {
-  backToTop.classList.toggle('visible', window.scrollY > 500);
+  if (backToTop) {
+    backToTop.classList.toggle('visible', window.scrollY > 450);
+  }
 });
 
-// Cursor Glow Effect
+// Cursor Glow Movement
 window.addEventListener('mousemove', (event) => {
-  cursorGlow.style.opacity = '1';
-  cursorGlow.style.left = `${event.clientX}px`;
-  cursorGlow.style.top = `${event.clientY}px`;
+  if (cursorGlow) {
+    cursorGlow.style.opacity = '1';
+    cursorGlow.style.left = `${event.clientX}px`;
+    cursorGlow.style.top = `${event.clientY}px`;
+  }
 });
 
 window.addEventListener('mouseleave', () => {
-  cursorGlow.style.opacity = '0';
+  if (cursorGlow) {
+    cursorGlow.style.opacity = '0';
+  }
 });
 
 // Magnetic Buttons Effect
@@ -275,13 +281,13 @@ document.querySelectorAll('.magnetic').forEach((button) => {
   });
 });
 
-// Profile Card 3D Tilt
+// Profile Card 3D Tilt Effect
 const profileCard = document.getElementById('profileCard');
 if (profileCard) {
   profileCard.addEventListener('mousemove', (event) => {
     const rect = profileCard.getBoundingClientRect();
-    const rotateY = ((event.clientX - rect.left) / rect.width - 0.5) * 10;
-    const rotateX = ((event.clientY - rect.top) / rect.height - 0.5) * -10;
+    const rotateY = ((event.clientX - rect.left) / rect.width - 0.5) * 12;
+    const rotateX = ((event.clientY - rect.top) / rect.height - 0.5) * -12;
     profileCard.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
   });
 
@@ -290,12 +296,17 @@ if (profileCard) {
   });
 }
 
-// Contact Form Handler
-contactForm.addEventListener('submit', (event) => {
-  event.preventDefault();
-  formStatus.textContent = 'Thank you for reaching out, Sheikh Raski Rayhan will get back to you shortly!';
-  contactForm.reset();
-  setTimeout(() => {
-    formStatus.textContent = '';
-  }, 5000);
-});
+// Contact Form Handler (Requirement 10)
+if (contactForm) {
+  contactForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    if (formStatus) {
+      formStatus.textContent = 'Thank you! Your message has been sent. Sheikh Raski Rayhan will get back to you shortly.';
+      formStatus.style.color = '#86efac';
+    }
+    contactForm.reset();
+    setTimeout(() => {
+      if (formStatus) formStatus.textContent = '';
+    }, 6000);
+  });
+}

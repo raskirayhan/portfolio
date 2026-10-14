@@ -10,6 +10,8 @@ Email       : raskirayhan@gmail.com
 Location    : Bagerhat, Khulna, Bangladesh
 GitHub      : https://github.com/raskirayhan
 LinkedIn    : https://www.linkedin.com/in/sheikh-raski-rayhan-36b588334?originalSubdomain=bd
+Facebook    : https://www.facebook.com/skraskirayhan/
+WhatsApp    : https://wa.me/8801995785133
 Portfolio   : https://raskirayhan.github.io/portfolio/
 
 
@@ -42,6 +44,7 @@ FEATURED PROJECTS
                 and management of local home repair and technical services.
    Live Demo  : https://raskirayhan.github.io/FixItNow-/
    Client Repo: https://github.com/raskirayhan/FixItNow-
+   Server Repo: https://github.com/raskirayhan/fixitnow
    Major Features:
    - Role-based JWT & Firebase authentication securing user and service provider 
      dashboards.
@@ -65,6 +68,25 @@ FEATURED PROJECTS
    - Optimized asset delivery maintaining fast page load speeds and cross-browser 
      accuracy.
 
+3. Habit Tracker – Analytics & Productivity Application
+   Overview   : Full-stack habit tracking web app featuring streak monitoring, 
+                analytics charts, and Firebase session management.
+   Live Demo  : https://habit-tracker-najifjawoad.netlify.app/
+   Client Repo: https://github.com/raskirayhan/habit-tracker
+   Major Features:
+   - Timezone-aware habit completion tracking and streak analytics.
+   - Secure user session handling with Firebase Authentication.
+   - Interactive progress visualization dashboard built with React & Tailwind CSS.
+
+4. Flower Storefront & Workshop
+   Overview   : A responsive flower storefront with seasonal collection displays, 
+                interactive product discovery, and smooth micro-animations.
+   Live Demo  : https://raskirayhan.github.io/flower-website/
+   Code Repo  : https://github.com/raskirayhan/flower-website
+   Major Features:
+   - Semantic responsive CSS Grid system maintaining strict visual hierarchy.
+   - Fast client-side rendering with zero heavyweight runtime overhead.
+
 
 EDUCATION
 --------------------------------------------------------------------------------
@@ -74,6 +96,12 @@ Status      : Undergraduate Student (Ongoing)
 Key Courses : Data Structures & Algorithms, Database Management Systems (DBMS), 
               Software Engineering & System Analysis, Web Engineering, 
               Object-Oriented Programming (OOP).
+
+
+PROFESSIONAL COURSES & CERTIFICATIONS
+--------------------------------------------------------------------------------
+- CS Fundamentals with Phitron | July 2024 – Jan 2025
+- Next Level Web Development Course | Nov 2025 – May 2026
 
 
 EXTRA-CURRICULAR ACTIVITIES & LEADERSHIP

@@ -8,7 +8,7 @@
       content="Official Portfolio of Sheikh Raski Rayhan - MERN Stack Web Developer & CSE Undergraduate Student engineering high-performance web platforms."
     />
     <meta name="theme-color" content="#060816" />
-    <meta name="keywords" content="Sheikh Raski Rayhan, MERN Stack Developer, Software Engineer, React.js, Next.js, Node.js, Khulna, Portfolio" />
+    <meta name="keywords" content="Sheikh Raski Rayhan, MERN Stack Developer, Full Stack Developer, Software Engineer, React.js, Next.js, Node.js, Khulna, Portfolio" />
     <title>Sheikh Raski Rayhan | MERN Stack Web Developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- Cursor Glow Element -->
+    <!-- Interactive Cursor Glow -->
     <div class="cursor-glow" aria-hidden="true"></div>
 
     <!-- Page Loader -->
@@ -24,20 +24,26 @@
       <div class="loader"></div>
     </div>
 
-    <!-- Background Accent Glows -->
+    <!-- Background Ambient Glows -->
     <div class="background-glow glow-one"></div>
     <div class="background-glow glow-two"></div>
 
-    <!-- Header & Navigation -->
+    <!-- Header & Navigation Bar (Requirement 1) -->
     <header class="hero" id="home">
       <nav class="nav">
-        <a href="#home" class="brand">Sheikh Raski Rayhan</a>
+        <a href="#home" class="brand">
+          <span class="brand-accent">&lt;</span>Sheikh Raski Rayhan<span class="brand-accent">/&gt;</span>
+        </a>
         <div class="nav-links desktop-only">
           <a href="#about">About</a>
           <a href="#skills">Skills</a>
           <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
           <a href="#education">Education</a>
           <a href="#contact">Contact</a>
+          <a href="assets/Sheikh_Raski_Rayhan_Resume.pdf" download="Sheikh_Raski_Rayhan_Resume.pdf" class="nav-resume-btn">
+            Resume
+          </a>
         </div>
         <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Navigation Menu">
           <span class="bar"></span>
@@ -51,16 +57,20 @@
         <a href="#about" class="mobile-nav-link">About</a>
         <a href="#skills" class="mobile-nav-link">Skills</a>
         <a href="#projects" class="mobile-nav-link">Projects</a>
+        <a href="#experience" class="mobile-nav-link">Experience</a>
         <a href="#education" class="mobile-nav-link">Education</a>
         <a href="#contact" class="mobile-nav-link">Contact</a>
-        <a href="assets/resume.txt" download class="btn btn-primary btn-sm" style="margin-top: 1rem;">Download Resume</a>
+        <a href="assets/Sheikh_Raski_Rayhan_Resume.pdf" download="Sheikh_Raski_Rayhan_Resume.pdf" class="btn btn-primary btn-sm" style="margin-top: 0.8rem;">
+          Download Resume (PDF)
+        </a>
       </div>
 
+      <!-- Hero Section Shell (Requirements 2, 3, 4) -->
       <div class="hero-shell">
         <div class="hero-content">
           <div class="hero-copy reveal">
-            <div class="availability-badge">Available for Work & Collaboration</div>
-            <p class="eyebrow">MERN Stack Web Developer • CSE Undergraduate</p>
+            <div class="availability-badge">Available for Work &amp; Collaboration</div>
+            <p class="eyebrow">MERN Stack Web Developer • Software Engineer</p>
             <h1>
               Architecting <span>high-performance</span> web platforms.
             </h1>
@@ -71,18 +81,19 @@
               Dedicated MERN Stack Developer and Computer Science undergraduate focused on engineering high-performance, mobile-responsive web platforms with React.js, Next.js, Node.js, Express.js, and MongoDB.
             </p>
 
+            <!-- Resume Download Button (Requirement 3) & CTAs -->
             <div class="hero-actions">
-              <a href="assets/resume.txt" download class="btn btn-primary magnetic" id="resumeBtn">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                Download Resume
+              <a href="assets/Sheikh_Raski_Rayhan_Resume.pdf" download="Sheikh_Raski_Rayhan_Resume.pdf" class="btn btn-primary magnetic" id="resumeBtn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                Download Resume (PDF)
               </a>
               <a href="#projects" class="btn btn-secondary magnetic">View Featured Projects</a>
               <a href="#contact" class="btn btn-tertiary magnetic">Hire Me</a>
             </div>
 
-            <!-- Social Links Embed -->
+            <!-- Social Media Links Embed (Requirement 4) -->
             <div class="social-links-bar">
-              <span class="social-label">Connect Profiles:</span>
+              <span class="social-label">Connect with me:</span>
               <div class="social-icons">
                 <a href="https://github.com/raskirayhan" target="_blank" rel="noreferrer" class="social-btn" title="GitHub">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
@@ -104,16 +115,17 @@
             </div>
           </div>
 
+          <!-- Professional Photo & Visual Card (Requirement 2) -->
           <div class="hero-visual reveal">
             <div class="profile-shell">
               <div class="profile-glow"></div>
               <div class="profile-card" id="profileCard">
                 <div class="profile-image-wrap">
-                  <img src="image/1780171147227.png" alt="Portrait of Sheikh Raski Rayhan" />
+                  <img src="image/profile.jpg" alt="Professional Portrait of Sheikh Raski Rayhan" />
                 </div>
                 <div class="profile-details">
                   <span class="profile-name">Sheikh Raski Rayhan</span>
-                  <span class="profile-title">B.Sc. in CSE • MERN Web Developer</span>
+                  <span class="profile-title">B.Sc. in CSE • MERN Stack Developer</span>
                 </div>
                 <div class="tech-stack">
                   <span class="tech-pill">React.js</span>
@@ -130,16 +142,17 @@
                     <strong>Location</strong>
                     <p>Bagerhat, Khulna, Bangladesh</p>
                   </div>
-                  <span class="status-dot" title="Available for Work"></span>
+                  <span class="status-dot" title="Available for Work & Collaboration"></span>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
+        <!-- Metric Badges -->
         <div class="hero-metrics reveal">
           <article class="metric-card">
-            <strong>B.Sc in CSE</strong>
+            <strong>B.Sc. in CSE</strong>
             <span>North Western University</span>
           </article>
           <article class="metric-card">
@@ -147,12 +160,12 @@
             <span>Full-Stack Engineering</span>
           </article>
           <article class="metric-card">
-            <strong>React & Next.js</strong>
-            <span>Frontend Specialization</span>
+            <strong>4+ Featured Builds</strong>
+            <span>Production-Grade Apps</span>
           </article>
           <article class="metric-card">
-            <strong>REST APIs</strong>
-            <span>Node & Express Backend</span>
+            <strong>Debating Speaker</strong>
+            <span>University Debating Club</span>
           </article>
         </div>
       </div>
@@ -164,56 +177,57 @@
     </header>
 
     <main>
-      <!-- About Me Section -->
+      <!-- About Me Section (Requirement 5: Journey, Enjoys, Hobbies, Personality) -->
       <section id="about" class="section section-premium">
         <div class="about-shell reveal">
           <div class="about-copy">
             <span class="section-label">ABOUT ME</span>
             <h2>Hi, I’m Sheikh Raski Rayhan</h2>
             <p class="about-intro">
-              Dedicated MERN Stack Developer and Computer Science undergraduate focused on engineering high-performance, mobile-responsive web platforms.
+              Dedicated MERN Stack Developer and Computer Science undergraduate student at <strong>North Western University, Khulna</strong>. Passionate about engineering high-performance, mobile-responsive web platforms with clean code and thoughtful architectures.
             </p>
 
             <div class="about-story-box">
-              <h3>🚀 Professional Profile</h3>
+              <h3>🚀 My Programming Journey</h3>
               <p>
-                Proficient in architecting modern frontend interfaces using React.js and Next.js, integrated with scalable MongoDB and Node.js backend solutions. Committed to delivering clean, maintainable code and optimized UI/UX while addressing intricate engineering requirements.
+                My passion for software engineering began with foundational computer science courses and algorithmic problem solving in C/C++. Fascinated by how software interacts directly with end users, I transitioned into modern web development. Over time, I mastered modern JavaScript, TypeScript, React.js, and Next.js, followed by scalable backend engineering using Node.js, Express.js, and MongoDB.
               </p>
             </div>
 
+            <!-- Detailed Aspects: Work Enjoyed, Hobbies, Personality -->
             <div class="about-highlights-grid">
               <article class="mini-card">
-                <span class="mini-icon">💡</span>
+                <span class="mini-icon">💻</span>
                 <div>
-                  <strong>Industrial & Soft Skills</strong>
-                  <p>Problem Solving, Technical Communication, System Analysis, Agile Collaboration.</p>
+                  <strong>Work I Enjoy</strong>
+                  <p>Architecting responsive frontend interfaces, writing clean RESTful APIs, scalable database modeling, and state management with Redux Toolkit.</p>
                 </div>
               </article>
               <article class="mini-card">
-                <span class="mini-icon">🗣️</span>
+                <span class="mini-icon">🎨</span>
                 <div>
-                  <strong>Leadership & Extra-Curricular</strong>
-                  <p>Active Speaker at University Debating Club – Sharpened structured argumentation and articulate communication.</p>
+                  <strong>Hobbies &amp; Creative Life</strong>
+                  <p>Active speaker in the University Debating Club, playing cricket &amp; outdoor sports, painting &amp; digital art sketches, and traveling across Bangladesh.</p>
                 </div>
               </article>
               <article class="mini-card">
-                <span class="mini-icon">🌐</span>
+                <span class="mini-icon">🌟</span>
                 <div>
-                  <strong>Languages</strong>
-                  <p>English (Professional Working Proficiency), Bengali (Native / Full Professional Proficiency).</p>
+                  <strong>Personality &amp; Values</strong>
+                  <p>Curious, analytical, detail-oriented problem solver with articulate communication skills. Committed to writing maintainable, clean code and continuous learning.</p>
                 </div>
               </article>
             </div>
 
             <div class="about-quick-stats">
-              <span>✔ B.Sc in CSE Student (Ongoing)</span>
-              <span>✔ MERN Stack Platforms</span>
-              <span>✔ Clean Code & Architecture</span>
-              <span>✔ Mobile-Responsive UI</span>
+              <span>✔ B.Sc. in CSE Student (Ongoing)</span>
+              <span>✔ MERN Stack Specialist</span>
+              <span>✔ University Debater</span>
+              <span>✔ Clean Code &amp; Best Practices</span>
             </div>
 
-            <div class="about-actions" style="margin-top: 1.5rem;">
-              <a href="assets/resume.txt" download class="btn btn-primary">Download Resume</a>
+            <div class="about-actions" style="margin-top: 1.5rem; display: flex; gap: 0.8rem; flex-wrap: wrap;">
+              <a href="assets/Sheikh_Raski_Rayhan_Resume.pdf" download="Sheikh_Raski_Rayhan_Resume.pdf" class="btn btn-primary">Download Resume (PDF)</a>
               <a href="#contact" class="btn btn-secondary">Get In Touch</a>
             </div>
           </div>
@@ -222,43 +236,44 @@
             <article class="timeline-card reveal-hover">
               <div class="timeline-icon">🎓</div>
               <div>
-                <h3>Education</h3>
-                <p>North Western University, Khulna, Bangladesh · B.Sc. in Computer Science & Engineering (CSE)</p>
+                <h3>Education &amp; Foundation</h3>
+                <p>North Western University, Khulna · B.Sc. in Computer Science &amp; Engineering (CSE)</p>
               </div>
             </article>
             <article class="timeline-card reveal-hover">
               <div class="timeline-icon">💻</div>
               <div>
                 <h3>Technical Focus</h3>
-                <p>React.js, Next.js, Redux Toolkit, Node.js, Express.js, MongoDB, RESTful APIs, Firebase Auth, JWT.</p>
+                <p>React.js, Next.js, Node.js, Express.js, MongoDB, TypeScript, Tailwind CSS, Redux Toolkit, REST APIs.</p>
               </div>
             </article>
             <article class="timeline-card reveal-hover">
-              <div class="timeline-icon">🏆</div>
+              <div class="timeline-icon">🗣️</div>
               <div>
-                <h3>Debating & Public Speaking</h3>
-                <p>Competed in debate tournaments, refining logical reasoning and presentation skills.</p>
+                <h3>Debating &amp; Leadership</h3>
+                <p>Active Speaker at University Debating Club – Sharpened structured argumentation and articulate public speaking.</p>
               </div>
             </article>
             <article class="timeline-card reveal-hover">
               <div class="timeline-icon">🎯</div>
               <div>
-                <h3>Engineering Goal</h3>
-                <p>Building production-grade web products that solve real-world problems with elegance and efficiency.</p>
+                <h3>Career Aspirations</h3>
+                <p>To collaborate with ambitious engineering teams, building scalable products that positively impact millions of users.</p>
               </div>
             </article>
           </div>
         </div>
       </section>
 
-      <!-- Skills Section -->
+      <!-- Skills Section (Requirement 6: Visually Appealing Graphical Format & Categorized) -->
       <section id="skills" class="section section-alt">
         <div class="section-heading reveal">
-          <p class="eyebrow">Technical & Industrial Skills</p>
-          <h2>Proficiencies aligned with industry standards.</h2>
+          <p class="eyebrow">Technical &amp; Industrial Skills</p>
+          <h2>Proficiencies visualized in categorized graphical format.</h2>
         </div>
 
         <div class="skills-grid">
+          <!-- Category 1: Frontend Development -->
           <article class="skill-card reveal">
             <div class="skill-card-top">
               <span class="skill-icon">⚛️</span>
@@ -268,7 +283,7 @@
               </div>
             </div>
             <div class="progress-row">
-              <div class="progress-label"><span>Proficiency</span><strong>92%</strong></div>
+              <div class="progress-label"><span>Mastery Level</span><strong>92%</strong></div>
               <div class="bar"><span style="width: 92%"></span></div>
             </div>
             <div class="skill-badges">
@@ -282,16 +297,17 @@
             </div>
           </article>
 
+          <!-- Category 2: Backend & Database -->
           <article class="skill-card reveal">
             <div class="skill-card-top">
               <span class="skill-icon">⚙️</span>
               <div>
-                <h3>Backend & Database</h3>
+                <h3>Backend &amp; Database</h3>
                 <p>Node.js • Express.js • MongoDB • REST APIs</p>
               </div>
             </div>
             <div class="progress-row">
-              <div class="progress-label"><span>Proficiency</span><strong>90%</strong></div>
+              <div class="progress-label"><span>Mastery Level</span><strong>90%</strong></div>
               <div class="bar"><span style="width: 90%"></span></div>
             </div>
             <div class="skill-badges">
@@ -304,38 +320,40 @@
             </div>
           </article>
 
+          <!-- Category 3: Tools & CS Concepts -->
           <article class="skill-card reveal">
             <div class="skill-card-top">
               <span class="skill-icon">🛠️</span>
               <div>
-                <h3>Tools & CS Concepts</h3>
+                <h3>Tools &amp; CS Concepts</h3>
                 <p>Git • GitHub • Vercel • DSA • OOP</p>
               </div>
             </div>
             <div class="progress-row">
-              <div class="progress-label"><span>Proficiency</span><strong>94%</strong></div>
+              <div class="progress-label"><span>Mastery Level</span><strong>94%</strong></div>
               <div class="bar"><span style="width: 94%"></span></div>
             </div>
             <div class="skill-badges">
-              <span class="skill-chip">Git & GitHub</span>
+              <span class="skill-chip">Git &amp; GitHub</span>
               <span class="skill-chip">Vercel</span>
               <span class="skill-chip">Netlify</span>
               <span class="skill-chip">Postman</span>
-              <span class="skill-chip">Data Structures & Algorithms</span>
-              <span class="skill-chip">Object-Oriented Programming</span>
+              <span class="skill-chip">Data Structures &amp; Algorithms</span>
+              <span class="skill-chip">Object-Oriented Programming (OOP)</span>
             </div>
           </article>
 
+          <!-- Category 4: Soft Skills & Leadership -->
           <article class="skill-card reveal">
             <div class="skill-card-top">
               <span class="skill-icon">🤝</span>
               <div>
-                <h3>Soft Skills & Leadership</h3>
+                <h3>Soft Skills &amp; Leadership</h3>
                 <p>Problem Solving • Communication • Debating</p>
               </div>
             </div>
             <div class="progress-row">
-              <div class="progress-label"><span>Proficiency</span><strong>95%</strong></div>
+              <div class="progress-label"><span>Mastery Level</span><strong>95%</strong></div>
               <div class="bar"><span style="width: 95%"></span></div>
             </div>
             <div class="skill-badges">
@@ -343,87 +361,86 @@
               <span class="skill-chip">Technical Communication</span>
               <span class="skill-chip">System Analysis</span>
               <span class="skill-chip">Agile Collaboration</span>
-              <span class="skill-chip">Public Speaking & Debating</span>
+              <span class="skill-chip">Public Speaking &amp; Debating</span>
             </div>
           </article>
         </div>
       </section>
 
-      <!-- Projects Section -->
+      <!-- Projects Section (Requirement 9: At Least 3 Projects in Card Format with Details Modal) -->
       <section id="projects" class="section">
         <div class="section-heading reveal">
-          <p class="eyebrow">Featured Projects</p>
-          <h2>Showcase applications reflecting full-stack depth and engineering precision.</h2>
+          <p class="eyebrow">Featured Work</p>
+          <h2>Showcase projects demonstrating product depth, UI/UX craft, and clean code.</h2>
         </div>
 
         <div id="projectGrid" class="project-grid">
-          <!-- FixItNow Project Card -->
+          <!-- Project 1: FixItNow -->
           <article class="project-card reveal">
-            <div class="project-visual" style="background: linear-gradient(135deg, #0ea5e9, #6366f1); display: grid; place-items: center; padding: 1.5rem; text-align: center;">
-              <div style="font-size: 2.5rem;">🛠️</div>
-              <strong style="color: white; font-size: 1.15rem; margin-top: 0.5rem;">FixItNow – On-Demand Service & Repair Platform</strong>
+            <div class="project-visual">
+              <img src="image/fixitnow-preview.svg" alt="FixItNow Project Screenshot" style="width: 100%; height: 100%; object-fit: cover;" />
             </div>
             <div class="project-body">
-              <h3>FixItNow – On-Demand Service & Repair Platform</h3>
+              <h3>FixItNow – On-Demand Service &amp; Repair Platform</h3>
               <p>A full-stack MERN application enabling seamless discovery, booking, and management of local home repair and technical services.</p>
               <div class="tag-row">
-                <span>React.js</span><span>Node.js</span><span>Express.js</span><span>MongoDB</span><span>Firebase Auth</span><span>JWT</span><span>Tailwind CSS</span>
+                <span>React.js</span><span>Next.js</span><span>Node.js</span><span>Express.js</span><span>MongoDB</span><span>Firebase Auth</span><span>Tailwind CSS</span>
               </div>
-              <div class="card-actions" style="margin-top: 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <div class="card-actions">
                 <button class="btn btn-primary btn-sm" onclick="openProjectModal(0)">View More / Details</button>
                 <a href="https://raskirayhan.github.io/FixItNow-/" class="btn btn-secondary btn-sm" target="_blank" rel="noreferrer">Live Demo</a>
               </div>
             </div>
           </article>
 
-          <!-- G3 Architects Project Card -->
+          <!-- Project 2: G3 Architects -->
           <article class="project-card reveal">
             <div class="project-visual">
-              <img src="image/g3 architecture/screencapture-raskirayhan-github-io-g3-architect-website-repo-2026-07-06-01_56_44.png" alt="G3 Architects screenshot" style="width: 100%; height: 100%; object-fit: cover;">
+              <img src="image/g3 architecture/screencapture-raskirayhan-github-io-g3-architect-website-repo-2026-07-06-01_56_44.png" alt="G3 Architects Screenshot" style="width: 100%; height: 100%; object-fit: cover;" />
             </div>
             <div class="project-body">
-              <h3>G3 Architects – Architectural Portfolio & Services Platform</h3>
+              <h3>G3 Architects – Architectural Studio Platform</h3>
               <p>A modern, responsive web application designed for architectural firms to showcase featured projects, client testimonials, and service offerings.</p>
               <div class="tag-row">
                 <span>HTML5</span><span>CSS Grid</span><span>Flexbox</span><span>JavaScript</span><span>Modal Overlays</span>
               </div>
-              <div class="card-actions" style="margin-top: 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <div class="card-actions">
                 <button class="btn btn-primary btn-sm" onclick="openProjectModal(1)">View More / Details</button>
                 <a href="https://raskirayhan.github.io/g3-architect-website-repo/" class="btn btn-secondary btn-sm" target="_blank" rel="noreferrer">Live Demo</a>
               </div>
             </div>
           </article>
 
-          <!-- Habit Tracker Project Card -->
+          <!-- Project 3: Habit Tracker -->
           <article class="project-card reveal">
             <div class="project-visual">
-              <img src="image/habbit_trucker/screencapture-habit-tracker-najifjawoad-netlify-app-2026-07-06-01_55_17.png" alt="Habit Tracker screenshot" style="width: 100%; height: 100%; object-fit: cover;">
+              <img src="image/habbit_trucker/screencapture-habit-tracker-najifjawoad-netlify-app-2026-07-06-01_55_17.png" alt="Habit Tracker Screenshot" style="width: 100%; height: 100%; object-fit: cover;" />
             </div>
             <div class="project-body">
-              <h3>Habit Tracker Application</h3>
+              <h3>Habit Tracker – Analytics &amp; Productivity App</h3>
               <p>A habit-building full-stack application featuring user authentication, daily streak tracking, completion analytics, and clean dashboard statistics.</p>
               <div class="tag-row">
-                <span>React</span><span>Firebase Auth</span><span>MongoDB</span><span>Node.js</span><span>Tailwind CSS</span>
+                <span>React.js</span><span>Firebase Auth</span><span>MongoDB</span><span>Node.js</span><span>Tailwind CSS</span>
               </div>
-              <div class="card-actions" style="margin-top: 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <div class="card-actions">
                 <button class="btn btn-primary btn-sm" onclick="openProjectModal(2)">View More / Details</button>
                 <a href="https://habit-tracker-najifjawoad.netlify.app/" class="btn btn-secondary btn-sm" target="_blank" rel="noreferrer">Live Demo</a>
               </div>
             </div>
           </article>
 
-          <!-- Flower Storefront Project Card -->
+          <!-- Project 4: Flower Storefront -->
           <article class="project-card reveal">
             <div class="project-visual">
-              <img src="image/flower_workshop/screencapture-raskirayhan-github-io-flower-website-2026-07-06-01_53_14.png" alt="Flower Storefront screenshot" style="width: 100%; height: 100%; object-fit: cover;">
+              <img src="image/flower_workshop/screencapture-raskirayhan-github-io-flower-website-2026-07-06-01_53_14.png" alt="Flower Storefront Screenshot" style="width: 100%; height: 100%; object-fit: cover;" />
             </div>
             <div class="project-body">
-              <h3>Flower Storefront & Workshop</h3>
-              <p>A responsive flower storefront featuring seasonal collection displays, interactive product cards, shopping cart workflow, and smooth micro-animations.</p>
+              <h3>Flower Storefront &amp; Workshop</h3>
+              <p>A responsive storefront featuring seasonal collection displays, interactive product discovery cards, and smooth CSS micro-animations.</p>
               <div class="tag-row">
-                <span>HTML5</span><span>CSS3</span><span>JavaScript (ES6+)</span><span>Responsive Design</span>
+                <span>HTML5</span><span>CSS3</span><span>JavaScript (ES6+)</span><span>Responsive Grid</span>
               </div>
-              <div class="card-actions" style="margin-top: 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <div class="card-actions">
                 <button class="btn btn-primary btn-sm" onclick="openProjectModal(3)">View More / Details</button>
                 <a href="https://raskirayhan.github.io/flower-website/" class="btn btn-secondary btn-sm" target="_blank" rel="noreferrer">Live Demo</a>
               </div>
@@ -432,11 +449,61 @@
         </div>
       </section>
 
-      <!-- Educational Qualification Section -->
-      <section id="education" class="section section-alt">
+      <!-- Experience & Certifications Section (Requirement 8) -->
+      <section id="experience" class="section section-alt">
         <div class="section-heading reveal">
-          <p class="eyebrow">Education</p>
-          <h2>Academic foundation in computer science and software engineering.</h2>
+          <p class="eyebrow">Experience &amp; Certifications</p>
+          <h2>Professional coursework, practical engineering, and leadership milestones.</h2>
+        </div>
+
+        <div class="timeline reveal">
+          <!-- Timeline Item 1 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <p class="timeline-label">Practical Experience</p>
+              <h3>Full-Stack MERN Product Engineering</h3>
+              <p>Architecting and deploying responsive web applications, implementing authentication workflows with JWT &amp; Firebase, and designing RESTful APIs with Node.js and MongoDB.</p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <p class="timeline-label">Professional Certification</p>
+              <h3>CS Fundamentals with Phitron</h3>
+              <p><strong>July 2024 – Jan 2025</strong> · Rigorous training in core Computer Science fundamentals, Object-Oriented Programming (OOP), Data Structures &amp; Algorithms, and problem solving.</p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 3 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <p class="timeline-label">Professional Certification</p>
+              <h3>Next Level Web Development Course</h3>
+              <p><strong>Nov 2025 – May 2026</strong> · Advanced industrial web development focusing on TypeScript, Next.js, Redux Toolkit, PostgreSQL/Prisma, scalable backend architectures, and production deployment.</p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 4 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <p class="timeline-label">Leadership &amp; Co-Curricular</p>
+              <h3>Active Speaker at University Debating Club</h3>
+              <p>Competed in inter-university debate tournaments, honing structured logical reasoning, critical thinking, and articulate technical communication.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Educational Qualification Section (Requirement 7: Above HSC) -->
+      <section id="education" class="section">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Academic Background</p>
+          <h2>Educational qualification and university coursework.</h2>
         </div>
 
         <div class="education-container reveal">
@@ -445,23 +512,24 @@
             <div class="education-header">
               <div class="edu-icon">🎓</div>
               <div>
-                <h3>Bachelor of Science (B.Sc.) in Computer Science & Engineering (CSE)</h3>
+                <h3>Bachelor of Science (B.Sc.) in Computer Science &amp; Engineering (CSE)</h3>
                 <h4 class="edu-institution">North Western University</h4>
                 <p class="edu-location">📍 Khulna, Bangladesh | Status: Undergraduate Student (Ongoing)</p>
               </div>
             </div>
             <div class="education-body">
               <p>
-                Pursuing a comprehensive curriculum in Computer Science and Engineering, building core strengths in software design, database systems, web engineering, and algorithm analysis.
+                Pursuing a rigorous curriculum in Computer Science and Engineering, building solid theoretical and practical expertise in software systems, database engineering, algorithms, and web technologies.
               </p>
               <div class="coursework-box">
-                <strong>Key Coursework:</strong>
+                <strong>Key Coursework &amp; Competencies:</strong>
                 <ul class="course-list">
-                  <li>Data Structures & Algorithms</li>
+                  <li>Data Structures &amp; Algorithms (DSA)</li>
                   <li>Database Management Systems (DBMS)</li>
-                  <li>Software Engineering & System Analysis</li>
-                  <li>Web Engineering</li>
-                  <li>Object-Oriented Programming (OOP)</li>
+                  <li>Software Engineering &amp; System Analysis</li>
+                  <li>Web Engineering &amp; Architecture</li>
+                  <li>Object-Oriented Programming (OOP in C++/Java/JS)</li>
+                  <li>Computer Networks &amp; Operating Systems</li>
                 </ul>
               </div>
             </div>
@@ -469,15 +537,15 @@
         </div>
       </section>
 
-      <!-- Contact Information Section -->
-      <section id="contact" class="section">
+      <!-- Contact Information Section (Requirement 10) -->
+      <section id="contact" class="section section-alt">
         <div class="section-heading reveal">
           <p class="eyebrow">Contact Information</p>
-          <h2>Direct access for hiring managers and collaborators.</h2>
+          <h2>Let’s connect and create something impactful together.</h2>
         </div>
         <div class="contact-grid">
           <div class="glass-panel reveal contact-links">
-            <h3>Contact Details</h3>
+            <h3>Direct Contact Details</h3>
             <div class="contact-info-list">
               <div class="contact-item">
                 <span class="c-icon">📞</span>
@@ -494,6 +562,13 @@
                 </div>
               </div>
               <div class="contact-item">
+                <span class="c-icon">💬</span>
+                <div>
+                  <strong>WhatsApp</strong>
+                  <a href="https://wa.me/8801995785133" target="_blank" rel="noreferrer">+880 1995-785133</a>
+                </div>
+              </div>
+              <div class="contact-item">
                 <span class="c-icon">📍</span>
                 <div>
                   <strong>Location</strong>
@@ -503,7 +578,7 @@
             </div>
 
             <div class="contact-social-section" style="margin-top: 1.5rem;">
-              <h4>Professional Profiles</h4>
+              <h4>Social Profiles</h4>
               <div class="contact-social-row">
                 <a href="https://github.com/raskirayhan" target="_blank" rel="noreferrer" class="btn btn-secondary btn-sm">GitHub</a>
                 <a href="https://www.linkedin.com/in/sheikh-raski-rayhan-36b588334?originalSubdomain=bd" target="_blank" rel="noreferrer" class="btn btn-secondary btn-sm">LinkedIn</a>
@@ -514,34 +589,39 @@
 
           <form class="contact-form reveal" id="contactForm">
             <h3>Send a Direct Message</h3>
-            <input type="text" name="name" placeholder="Your Name" required />
-            <input type="email" name="email" placeholder="Your Email" required />
-            <textarea name="message" rows="5" placeholder="Write your message..." required></textarea>
-            <button type="submit" class="btn btn-primary magnetic">Send Message</button>
+            <input type="text" name="name" id="formName" placeholder="Your Name" required />
+            <input type="email" name="email" id="formEmail" placeholder="Your Email Address" required />
+            <textarea name="message" id="formMessage" rows="5" placeholder="Write your message here..." required></textarea>
+            <button type="submit" class="btn btn-primary magnetic">
+              Send Message
+            </button>
             <p id="form-status" class="form-status"></p>
           </form>
         </div>
       </section>
     </main>
 
-    <!-- Footer -->
+    <!-- Footer (Requirement 11) -->
     <footer class="footer">
       <div class="footer-content">
-        <a href="#home" class="brand footer-brand">Sheikh Raski Rayhan</a>
-        <p>MERN Stack Web Developer & CSE Student based in Bagerhat, Khulna, Bangladesh.</p>
+        <a href="#home" class="brand footer-brand">
+          <span class="brand-accent">&lt;</span>Sheikh Raski Rayhan<span class="brand-accent">/&gt;</span>
+        </a>
+        <p>MERN Stack Web Developer &amp; CSE Undergraduate based in Bagerhat, Khulna, Bangladesh.</p>
       </div>
       <div class="footer-links">
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
         <a href="#education">Education</a>
         <a href="#contact">Contact</a>
       </div>
-      <p>© <span id="year"></span> Sheikh Raski Rayhan. All rights reserved.</p>
+      <p class="footer-copy">© <span id="year"></span> Sheikh Raski Rayhan. All rights reserved.</p>
       <a href="#home" class="back-to-top" id="backToTop" title="Back to Top">↑</a>
     </footer>
 
-    <!-- Interactive Project Details Modal -->
+    <!-- Interactive Project Details Modal (Requirement 9) -->
     <div class="modal-overlay" id="projectModal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
       <div class="modal-card">
         <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close details modal">&times;</button>
@@ -571,11 +651,11 @@
 
           <div class="modal-grid-box">
             <div class="modal-box challenge-box">
-              <h3>⭐ Major Features</h3>
+              <h3>⚠️ Challenges Faced</h3>
               <p id="modalChallenges"></p>
             </div>
             <div class="modal-box improvement-box">
-              <h3>🚀 Potential Improvements</h3>
+              <h3>🚀 Potential Improvements &amp; Future Plans</h3>
               <p id="modalImprovements"></p>
             </div>
           </div>
@@ -583,7 +663,7 @@
       </div>
     </div>
 
-    <!-- Scripts -->
+    <!-- Interactive Scripts -->
     <script src="script.js"></script>
   </body>
 </html>

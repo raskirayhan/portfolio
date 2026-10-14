@@ -16,7 +16,7 @@ const projects = [
     github: 'https://github.com/raskirayhan/FixItNow-',
     serverGithub: 'https://github.com/raskirayhan/fixitnow',
     demo: 'https://raskirayhan.github.io/FixItNow-/',
-    screenshot: '',
+    screenshot: 'image/fixitnow-preview.svg',
     color: 'linear-gradient(135deg, #0ea5e9, #6366f1)',
     challenges: '• Role-based JWT & Firebase authentication securing user and service provider dashboards.\n• Real-time service search, multi-category filtering, and interactive booking workflows.\n• Express.js REST API and MongoDB backend with complete CRUD data management.\n• Fast, mobile-responsive UI built with React.js, React Hooks, and Tailwind CSS.',
     improvements: 'Adding Stripe / SSLCommerz online payments, WebSockets live customer-technician chat, and technician GPS tracking.'
