@@ -1158,94 +1158,328 @@ h1 span {
 }
 
 /* ==========================================================================
-   Educational Qualification Section (Requirement 7)
+   Educational Qualification Section (Requirement 7) - Modern UI/UX Upgrade
    ========================================================================== */
-.education-container {
-  max-width: 900px;
+.section-subtext {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  max-width: 680px;
+  margin: 0.6rem 0 0;
+  line-height: 1.7;
+}
+
+.education-showcase-wrap {
+  position: relative;
+  max-width: 1060px;
   margin: 0 auto;
 }
 
-.education-card {
-  position: relative;
-  background: var(--panel);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 2.2rem;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(16px);
-}
-
-.education-badge {
+.edu-glow-backdrop {
   position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  color: #ffffff;
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  padding: 0.35rem 0.9rem;
-  border-radius: var(--radius-full);
+  inset: -15px;
+  background: radial-gradient(ellipse at 50% 30%, rgba(56, 189, 248, 0.16) 0%, rgba(99, 102, 241, 0.12) 40%, transparent 72%);
+  filter: blur(45px);
+  z-index: 0;
+  border-radius: 2.5rem;
+  pointer-events: none;
 }
 
-.education-header {
+.education-card-modern {
+  position: relative;
+  z-index: 1;
+  background: var(--panel);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius-lg);
+  padding: clamp(1.8rem, 3.5vw, 2.8rem);
+  box-shadow: 0 25px 65px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(24px);
+}
+
+.edu-top-bar {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   gap: 1.25rem;
-  align-items: flex-start;
+  flex-wrap: wrap;
+  padding-bottom: 1.4rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 1.5rem;
+}
+
+.edu-institution-brand {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+}
+
+.edu-icon-modern {
+  font-size: 2.2rem;
+  width: 3.8rem;
+  height: 3.8rem;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.18), rgba(99, 102, 241, 0.14));
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  border-radius: 1.1rem;
+  box-shadow: 0 0 25px rgba(56, 189, 248, 0.2);
+  flex-shrink: 0;
+}
+
+.edu-dept-tag {
+  display: block;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #818cf8;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.edu-uni-name {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin: 0;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+}
+
+.edu-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.5rem 1.1rem;
+  border-radius: var(--radius-full);
+  background: rgba(34, 197, 94, 0.12);
+  border: 1px solid rgba(34, 197, 94, 0.35);
+  color: #86efac;
+  font-size: 0.84rem;
+  font-weight: 600;
+  box-shadow: 0 0 16px rgba(34, 197, 94, 0.15);
+  white-space: nowrap;
+}
+
+.edu-radar-ping {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.25);
+  animation: pulseDot 2s infinite;
+}
+
+.edu-degree-banner {
   margin-bottom: 1.25rem;
 }
 
-.edu-icon {
-  font-size: 2.5rem;
-  background: rgba(56, 189, 248, 0.1);
-  padding: 0.8rem;
-  border-radius: var(--radius-md);
-  border: 1px solid rgba(56, 189, 248, 0.25);
+.edu-degree-title {
+  font-size: clamp(1.4rem, 2.6vw, 1.95rem);
+  font-weight: 800;
+  line-height: 1.28;
+  margin: 0 0 0.85rem;
+  background: linear-gradient(90deg, #ffffff 0%, #dbeafe 50%, #93c5fd 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
-.education-header h3 {
-  font-size: 1.4rem;
-  font-weight: 700;
-  margin: 0 0 0.35rem;
+.edu-meta-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
 }
 
-.edu-institution {
+.edu-meta-pill {
+  font-size: 0.82rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #cbd5e1;
+  font-weight: 500;
+}
+
+.edu-summary-text {
+  color: #cbd5e1;
+  font-size: 1.04rem;
+  line-height: 1.85;
+  margin: 0 0 1.6rem;
+}
+
+/* Academic Highlights Metrics Row */
+.edu-metrics-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.8rem;
+}
+
+.edu-metric-item {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1rem;
+  padding: 1rem 1.25rem;
+  transition: var(--transition);
+}
+
+.edu-metric-item:hover {
+  border-color: rgba(56, 189, 248, 0.35);
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateY(-2px);
+}
+
+.edu-metric-num {
+  display: block;
   font-size: 1.15rem;
+  font-weight: 800;
   color: var(--accent-2);
-  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.edu-metric-label {
+  font-size: 0.84rem;
+  color: var(--text-muted);
+}
+
+/* Coursework Matrix */
+.edu-coursework-section {
+  background: rgba(6, 10, 24, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 1.4rem;
+  padding: clamp(1.2rem, 2.4vw, 1.8rem);
+  margin-bottom: 1.4rem;
+}
+
+.edu-coursework-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.3rem;
+}
+
+.edu-coursework-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffffff;
   margin: 0 0 0.25rem;
 }
 
-.edu-location {
-  font-size: 0.9rem;
+.edu-coursework-subtitle {
+  font-size: 0.88rem;
   color: var(--text-muted);
   margin: 0;
 }
 
-.coursework-box {
-  margin-top: 1.5rem;
-  background: rgba(0, 0, 0, 0.3);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  padding: 1.25rem 1.5rem;
+.edu-curriculum-badge {
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  color: var(--accent-2);
+  padding: 0.3rem 0.8rem;
+  border-radius: var(--radius-full);
+  background: rgba(56, 189, 248, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.25);
 }
 
-.coursework-box strong {
-  display: block;
-  font-size: 0.95rem;
-  color: #93c5fd;
-  margin-bottom: 0.6rem;
-}
-
-.course-list {
+.edu-coursework-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 0.5rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.course-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1rem;
+  padding: 1.15rem;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.course-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(56, 189, 248, 0.45);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+}
+
+.course-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.7rem;
+}
+
+.course-icon {
+  font-size: 1.35rem;
+}
+
+.course-badge {
+  font-size: 0.7rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 6px;
+  background: rgba(99, 102, 241, 0.15);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  color: #a5b4fc;
+  font-weight: 600;
+}
+
+.course-card h6 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 0.45rem;
+  line-height: 1.35;
+}
+
+.course-card p {
+  font-size: 0.84rem;
+  color: #94a3b8;
+  line-height: 1.55;
   margin: 0;
-  padding-left: 1.2rem;
-  color: var(--text-muted);
-  font-size: 0.9rem;
+  flex-grow: 1;
+}
+
+.edu-card-footer {
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.88rem;
+  color: #94a3b8;
+}
+
+.edu-footer-info {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+.edu-footer-icon {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 960px) {
+  .edu-coursework-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 680px) {
+  .edu-top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .edu-metrics-row {
+    grid-template-columns: 1fr;
+  }
+
+  .edu-coursework-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ==========================================================================
