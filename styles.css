@@ -28,9 +28,25 @@
   box-sizing: border-box;
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, span {
+  overflow-wrap: break-word;
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 5rem;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
@@ -44,6 +60,7 @@ body {
   color: var(--text);
   line-height: 1.7;
   overflow-x: hidden;
+  width: 100%;
   min-height: 100vh;
 }
 
@@ -233,7 +250,7 @@ footer {
   color: var(--accent-2);
 }
 
-@media (max-width: 860px) {
+@media (max-width: 990px) {
   .desktop-only {
     display: none;
   }
@@ -1738,10 +1755,13 @@ h1 span {
 /* ==========================================================================
    Responsive Breakpoints (Requirement 12)
    ========================================================================== */
+
+/* 1. Tablet Screens (768px - 990px) */
 @media (max-width: 990px) {
   .hero-content {
     grid-template-columns: 1fr;
     text-align: center;
+    gap: 2.5rem;
   }
 
   .hero-copy {
@@ -1765,22 +1785,67 @@ h1 span {
 
   .hero-metrics {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
   }
 
   .about-shell {
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
 
+  .skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* 2. Phablet & Mobile Screen Widths (<= 768px) */
+@media (max-width: 768px) {
   .skills-grid,
   .project-grid {
     grid-template-columns: 1fr;
   }
 
-  .contact-grid {
-    grid-template-columns: 1fr;
+  .section {
+    padding: 3.8rem 0;
+  }
+
+  .section-alt {
+    padding: 3rem 1.4rem;
+    border-radius: 1.5rem;
+    margin: 1.5rem auto;
+  }
+
+  .section-heading {
+    margin-bottom: 2rem;
+  }
+
+  .footer-cta-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .footer-action-buttons {
+    width: 100%;
+  }
+
+  .footer-middle-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
   }
 }
 
+/* 3. Narrow Mobile Viewports (<= 600px) */
 @media (max-width: 600px) {
   nav,
   section,
@@ -1789,7 +1854,7 @@ h1 span {
   }
 
   .nav {
-    padding: 0.9rem 1.1rem;
+    padding: 0.85rem 1rem;
   }
 
   .hero-metrics {
@@ -1801,26 +1866,195 @@ h1 span {
     width: 100%;
   }
 
-  .btn {
+  .hero-actions .btn {
     width: 100%;
+    min-height: 44px;
   }
 
   .about-quick-stats {
     grid-template-columns: 1fr;
   }
 
-  .education-header {
-    flex-direction: column;
+  .modal-card {
+    padding: 1.5rem 1.2rem;
   }
 
-  .education-badge {
-    position: static;
-    display: inline-block;
-    margin-bottom: 0.8rem;
+  .modal-grid-box {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-links-row {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .modal-links-row .btn {
+    width: 100%;
+    min-height: 44px;
+  }
+
+  .card-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .card-actions .btn {
+    width: 100%;
+    min-height: 42px;
+  }
+
+  .footer-action-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .footer-btn {
+    width: 100%;
+    justify-content: center;
+    min-height: 44px;
+  }
+
+  .footer-bottom-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.65rem;
+  }
+}
+
+/* 4. Small Mobile & Ultra-Compact Viewports (320px - 480px) */
+@media (max-width: 480px) {
+  nav,
+  section,
+  footer {
+    width: calc(100% - 1.25rem);
+  }
+
+  .nav {
+    padding: 0.75rem 0.85rem;
+  }
+
+  .brand {
+    font-size: 1rem;
+    max-width: calc(100% - 46px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  h1 {
+    font-size: clamp(1.75rem, 5.2vw, 2.25rem);
+    line-height: 1.15;
+  }
+
+  .section-heading h2 {
+    font-size: clamp(1.45rem, 4.4vw, 1.85rem);
+  }
+
+  .availability-badge {
+    font-size: 0.78rem;
+    padding: 0.35rem 0.75rem;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .hero-metrics {
+    gap: 0.75rem;
+  }
+
+  .metric-card {
+    padding: 1rem 1.15rem;
+  }
+
+  .about-copy,
+  .contact-links,
+  .contact-form,
+  .timeline-card,
+  .skill-card,
+  .footer-card {
+    padding: 1.25rem 1rem;
+    border-radius: 1rem;
+  }
+
+  .timeline {
+    margin-left: 0.4rem;
+    padding-left: 1.35rem;
+  }
+
+  .timeline-dot {
+    left: -1.95rem;
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .edu-compact-card {
+    padding: 1.15rem 0.95rem;
+  }
+
+  .edu-compact-brand {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .edu-compact-icon {
+    width: 2.6rem;
+    height: 2.6rem;
+    font-size: 1.4rem;
+    border-radius: 0.75rem;
+  }
+
+  .edu-compact-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+
+  .edu-compact-uni {
+    font-size: 0.95rem;
+  }
+
+  .edu-compact-title {
+    font-size: 1.05rem;
+  }
+
+  .edu-pill {
+    font-size: 0.72rem;
+    padding: 0.25rem 0.55rem;
+  }
+
+  .modal-overlay {
+    padding: 0.6rem;
   }
 
   .modal-card {
-    padding: 1.5rem;
+    padding: 1.15rem 0.95rem;
+    max-height: 92vh;
+    border-radius: 1rem;
+  }
+
+  .modal-close-btn {
+    top: 0.65rem;
+    right: 0.65rem;
+    width: 34px;
+    height: 34px;
+    font-size: 1.3rem;
+  }
+
+  .modal-title-box h2 {
+    font-size: 1.35rem;
+  }
+
+  .contact-item a,
+  .contact-item p {
+    font-size: 0.9rem;
+    word-break: break-word;
+  }
+
+  .back-to-top {
+    right: 1rem;
+    bottom: 1rem;
+    width: 40px;
+    height: 40px;
   }
 }
 

@@ -135,8 +135,26 @@ if (yearElement) {
 
 // Mobile Menu Toggle (Requirement 1)
 if (mobileMenuBtn && mobileDrawer) {
-  mobileMenuBtn.addEventListener('click', () => {
-    mobileDrawer.classList.toggle('active');
+  mobileMenuBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isOpened = mobileDrawer.classList.toggle('active');
+    mobileMenuBtn.setAttribute('aria-expanded', isOpened ? 'true' : 'false');
+  });
+
+  // Close drawer when clicking outside
+  document.addEventListener('click', (e) => {
+    if (mobileDrawer.classList.contains('active') && !mobileDrawer.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+      mobileDrawer.classList.remove('active');
+      mobileMenuBtn.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  // Close drawer on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && mobileDrawer.classList.contains('active')) {
+      mobileDrawer.classList.remove('active');
+      mobileMenuBtn.setAttribute('aria-expanded', 'false');
+    }
   });
 }
 
@@ -144,6 +162,9 @@ mobileNavLinks.forEach((link) => {
   link.addEventListener('click', () => {
     if (mobileDrawer) {
       mobileDrawer.classList.remove('active');
+      if (mobileMenuBtn) {
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+      }
     }
   });
 });
